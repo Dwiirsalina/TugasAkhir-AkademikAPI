@@ -1,0 +1,34 @@
+package id.its.akademik.dao.redis;
+
+import java.util.List;
+
+import id.its.akademik.dao.cache.AbstractCache;
+import id.its.akademik.dao.cache.KelembagaanCache;
+import id.its.akademik.domain.ProdiAjar;
+
+public class RedisKelembagaanDao extends AbstractCache implements KelembagaanCache{
+	@Override
+	public Boolean checkKey(String key) {
+		return this.checkKeyinRedis(key);
+	}
+
+	@Override
+	public void setProdiAjar(String key,List<ProdiAjar> list) {
+		this.setListOperation(key, list);
+		
+	}
+
+	@Override
+	public List<ProdiAjar> getProdiAjar(String key) {
+		List<Object> objects=this.getListOperations(key);
+		List<ProdiAjar> listProdi=null;
+		
+		for(Object object:objects)
+		{
+			ProdiAjar prodi=(ProdiAjar) object;
+			listProdi.add(prodi);
+		}
+		return listProdi;
+	}
+
+}

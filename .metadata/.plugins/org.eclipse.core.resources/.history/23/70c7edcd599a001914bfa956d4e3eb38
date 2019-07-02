@@ -1,0 +1,11 @@
+package id.its.akademik.dao.redis;
+
+import java.util.List;
+
+import id.its.akademik.dao.cache.AbstractCache;
+import id.its.akademik.dao.cache.KelembagaanCache;
+import id.its.akademik.domain.ProdiAjar;
+
+public class RedisKelembagaanDao extends AbstractCache implements KelembagaanCache{
+
+}

@@ -1,0 +1,8 @@
+package id.its.akademik.dao.redis;
+
+import id.its.akademik.dao.cache.AbstractCache;
+import id.its.akademik.dao.cache.MahasiswaCache;
+
+public class RedisMahasiswaDao extends AbstractCache implements MahasiswaCache {
+
+}

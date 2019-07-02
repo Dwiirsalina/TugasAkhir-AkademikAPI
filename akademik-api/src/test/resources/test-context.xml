@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	   xmlns:cxf="http://cxf.apache.org/core"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+                        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                        http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+                        http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
+
+	<import resource="classpath:akademik-endpoint-beans.xml"/>
+	<import resource="classpath:integra-filter-beans.xml" />
+	
+    <jaxrs:server id="testCxfServer" address="http://localhost:8080/akademik/">
+        <jaxrs:serviceBeans>
+        	<ref bean="baseEndpoint" />
+			<ref bean="fakultasEndpoint" />
+			<ref bean="mahasiswaEndpoint" />
+			<ref bean="dosenEndpoint" />
+			<ref bean="prodiEndpoint" />
+			<ref bean="frsEndpoint" />
+			<ref bean="ipdEndpoint" />
+			<ref bean="waliEndpoint" />
+			<ref bean="basicEndpoint" />
+  		</jaxrs:serviceBeans>
+        <jaxrs:extensionMappings>
+            <entry key="json" value="application/json"/>
+        </jaxrs:extensionMappings>
+        <jaxrs:features>
+            <cxf:logging/>
+        </jaxrs:features>
+        <jaxrs:providers>
+            <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+			<ref bean="jwtAuthFilter" />
+        </jaxrs:providers>
+    </jaxrs:server>
+ 
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate"/> 
+</beans>

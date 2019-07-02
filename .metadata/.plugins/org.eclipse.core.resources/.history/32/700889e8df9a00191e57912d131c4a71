@@ -1,0 +1,13 @@
+package id.its.akademik.dao.cache;
+
+import java.util.List;
+
+import id.its.akademik.domain.JadwalKuliah;
+import id.its.akademik.domain.Kurikulum;
+
+public interface MahasiswaCache {
+	Boolean checkKey(String key);
+	void setJadwalKuliah(String key,List<JadwalKuliah> list);
+	List<JadwalKuliah> getJadwalKuliah(String key);
+
+}

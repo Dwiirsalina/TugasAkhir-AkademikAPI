@@ -1,0 +1,9 @@
+package id.its.akademik.dao.cache;
+
+import java.util.List;
+
+import id.its.akademik.domain.ProdiAjar;
+
+public interface KelembagaanCache {
+	List<ProdiAjar> getProdiAjar();
+}

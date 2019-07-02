@@ -1,0 +1,56 @@
+package id.its.akademik.dao.redis;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import id.its.akademik.dao.cache.AbstractCache;
+import id.its.akademik.dao.cache.MahasiswaCache;
+import id.its.akademik.domain.JadwalKuliah;
+import id.its.akademik.domain.Kurikulum;
+
+public class RedisMahasiswaDao extends AbstractCache implements MahasiswaCache {
+
+	@Override
+	public Boolean checkKey(String key) {
+		return this.checkKeyinRedis(key);
+	}
+
+	@Override
+	public void setJadwalKuliah(String key, List<JadwalKuliah> list) {
+		List<Object> objects=new ArrayList();
+		for(Kurikulum matkul_kurikulum:list)
+		{
+			Object object=(Object) matkul_kurikulum;
+			objects.add(object);
+		}
+		this.setListOperation(key, objects);
+		
+	}
+
+	@Override
+	public List<Kurikulum> getMataKuliahKurikulum(String key) {
+		List<Object> objects=this.getListOperations(key);
+		List<Kurikulum> listKurikulum=new ArrayList();
+		
+		for(Object object:objects)
+		{
+			Kurikulum matkul_kurikulum=(Kurikulum) object;
+			listKurikulum.add(matkul_kurikulum);
+		}
+		return listKurikulum;
+	}
+
+
+	@Override
+	public void setJadwalKuliah(String key, List<JadwalKuliah> list) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<JadwalKuliah> getJadwalKuliah(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

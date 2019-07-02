@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MahasiswaDaoTest" project="akademik-api" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="id.its.akademik.dao.test.MahasiswaDaoTest" time="1.599">
+    <testcase name="canRetrieveMahasiswa" classname="id.its.akademik.dao.test.MahasiswaDaoTest" time="1.599">
+      <error>org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [SELECT m.ma_nrp AS id, m.ma_nrp_baru AS nrp, substring(ma_nrp, 1, 2)+substring(ma_nrp, 5, 3) AS kode_prodi, m.ma_nama AS nama, m.ma_namalengkap AS nama_lengkap, m.ma_idsex AS jk, p.PE_NamaLengkap AS dosen_wali, m.ma_tgllahir AS tgl_lahir, m.ma_tmplahir AS tmpt_lahir, ag.ag_agama AS agama, m.ma_idstatusnikah AS status_kawin, m.ma_alamatsby AS alamat_sby, m.ma_kodepos AS kodepos, m.MA_NomorHP AS telp_mhs, m.ma_email AS email, m.ma_goldarah AS gol_darah, wn.Kewarganegaraan as kewarganegaraan, ps.PS_Nama_Baru AS prodi, CONVERT(DECIMAL(10,2), MA_IPK) AS ipk, MA_SksLulus AS sks_lulus, YEAR(MA_TglMasukITS) AS tahun_masuk FROM mahasiswa m LEFT JOIN val_Kewarganegaraan wn ON wn.ID = m.ma_idkewarganegaraan LEFT JOIN agama ag ON ag.ag_id = m.ma_ag_id LEFT JOIN Pegawai p ON p.PE_Nip = m.MA_PE_NipWali JOIN ProgramStudi ps ON substring(m.ma_nrp, 1, 2)+substring(m.ma_nrp, 5, 3) = ps.PS_Kode_Prodi_Lama WHERE m.ma_nrp = ?]; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid column name 'MA_NomorHP'.&#13;
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)&#13;
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)&#13;
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658)&#13;
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:693)&#13;
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:720)&#13;
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:770)&#13;
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query(NamedParameterJdbcTemplate.java:190)&#13;
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query(NamedParameterJdbcTemplate.java:197)&#13;
+	at id.its.akademik.dao.jdbc.JdbcMahasiswaDao.getMahasiswa(JdbcMahasiswaDao.java:78)&#13;
+	at id.its.akademik.dao.test.MahasiswaDaoTest.canRetrieveMahasiswa(MahasiswaDaoTest.java:25)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)&#13;
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid column name 'MA_NomorHP'.&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:259)&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1547)&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.doExecutePreparedStatement(SQLServerPreparedStatement.java:548)&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement$PrepStmtExecCmd.doExecute(SQLServerPreparedStatement.java:479)&#13;
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7344)&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2713)&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:224)&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:204)&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.executeQuery(SQLServerPreparedStatement.java:401)&#13;
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)&#13;
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)&#13;
+	at org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:701)&#13;
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:642)&#13;
+	... 35 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

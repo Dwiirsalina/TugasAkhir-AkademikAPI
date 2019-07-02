@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="FakultasEndpointTest" project="akademik-api" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="id.its.akademik.endpoint.test.FakultasEndpointTest" time="0.279">
+    <testcase name="canGetFakultas" classname="id.its.akademik.endpoint.test.FakultasEndpointTest" time="0.279">
+      <error>java.lang.IllegalStateException: Failed to load ApplicationContext&#13;
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)&#13;
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)&#13;
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)&#13;
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 53264&#13;
+	at org.springframework.asm.ClassReader.&lt;init&gt;(Unknown Source)&#13;
+	at org.springframework.asm.ClassReader.&lt;init&gt;(Unknown Source)&#13;
+	at org.springframework.asm.ClassReader.&lt;init&gt;(Unknown Source)&#13;
+	at org.springframework.core.type.classreading.SimpleMetadataReader.&lt;init&gt;(SimpleMetadataReader.java:48)&#13;
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:80)&#13;
+	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:101)&#13;
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:76)&#13;
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.checkConfigurationClassCandidate(ConfigurationClassBeanDefinitionReader.java:300)&#13;
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:175)&#13;
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:144)&#13;
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:599)&#13;
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:407)&#13;
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)&#13;
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)&#13;
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)&#13;
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)&#13;
+	... 24 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

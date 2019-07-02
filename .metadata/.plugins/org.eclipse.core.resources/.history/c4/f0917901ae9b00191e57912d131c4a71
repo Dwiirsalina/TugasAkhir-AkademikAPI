@@ -1,0 +1,16 @@
+package id.its.akademik.dao.cache;
+
+import java.util.List;
+import java.util.Map;
+
+import id.its.akademik.domain.Mahasiswa;
+import id.its.akademik.domain.Pegawai;
+
+public interface PegawaiCache {
+	Boolean checkKey(String key);
+	void setMahasiswaWali(String key,List<Mahasiswa> list);
+	List<Mahasiswa> getMahasiswaWali(String key);
+	void setDosen(String key,Pegawai pegawai);
+	Pegawai getDosen(String key);
+
+}

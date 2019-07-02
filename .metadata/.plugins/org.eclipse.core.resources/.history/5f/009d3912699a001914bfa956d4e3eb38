@@ -1,0 +1,6 @@
+package id.its.akademik.dao.cache;
+
+public interface KurikulumCache {
+	Boolean checkKey(String key);
+
+}

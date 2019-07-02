@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.1.xsd
+           http://www.springframework.org/schema/cache 
+           http://www.springframework.org/schema/cache/spring-cache.xsd">
+
+	<cache:annotation-driven/>
+    <context:annotation-config/>
+    <bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">
+        <property name="caches">
+            <set>
+                <bean class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean" name="directory"/>
+                <bean class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean" name="addresses"/>
+            </set>
+        </property>
+    </bean>
+    <!-- define caching behavior -->
+    <cache:advice cache-manager="cacheManager">
+        <cache:caching cache="instruments, directory">
+            <cache:cacheable method="findAll" unless="#result.size() > 25"/>
+            <cache:cacheable method="findByIndex"/>
+            <cache:cache-put method="save"/>
+            <cache:cache-evict method="delete"/>
+            <cache:cache-evict method="deleteAll" all-entries="true"/>
+            <cache:cacheable method="play" condition="#instrument.equals('trombone')"/>
+        </cache:caching>
+    </cache:advice>
+    <bean id="jedisConnectionFactory"
+		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory" p:host-name="10.199.2.118"
+		p:port="6379" p:usePool="true" p:database="0"/>
+	<bean id="stringRedisSerializer" 
+    	class="org.springframework.data.redis.serializer.StringRedisSerializer"/>
+    <bean id="jsonRedisSerializer" 
+    	class="org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer"/>
+	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate" 
+		p:connection-factory-ref="jedisConnectionFactory" p:enable-transaction-support="true"
+		p:keySerializer-ref="stringRedisSerializer" p:hashKeySerializer-ref="stringRedisSerializer"
+		p:valueSerializer-ref="jsonRedisSerializer"/>
+
+</beans>

@@ -1,0 +1,33 @@
+package id.its.akademik.dao.cache;
+
+import java.util.List;
+
+import org.springframework.data.redis.core.RedisTemplate;
+
+public abstract class AbstractCache {
+	
+	private RedisTemplate redisTemplate;
+	
+	public RedisTemplate getRedisTemplate() {
+		return redisTemplate;
+	}
+
+	public void setRedisTemplate(RedisTemplate redisTemplate) {
+		this.redisTemplate = redisTemplate;
+	}
+	
+	public Boolean checkKeyinRedis(String key)
+	{
+		if(this.redisTemplate.hasKey(key)==false)
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	public void setListOperation(String key,List<Object> objects)
+	{
+		ListOperations
+	}
+	
+}

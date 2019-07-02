@@ -1,0 +1,14 @@
+package id.its.akademik.dao.cache;
+
+import java.util.List;
+
+import id.its.akademik.domain.MataKuliah;
+
+public interface AkademikCache {
+	Boolean checkKey(String key);
+	void setMatakuliah(String key,List<MataKuliah> list);
+	List<MataKuliah> getMataKuliah(String key);
+	void setMatakuliah(String key,List<MataKuliah> list);
+	List<MataKuliah> getMataKuliah(String key);
+
+}

@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<import resource="classpath:akademik-redis-config.xml"/>
+	<bean id="kelembagaanRedis" class="id.its.akademik.dao.redis.RedisKelembagaanDao">
+		<property name="redisTemplate" ref="redisTemplate"/>
+	</bean>
+	 <!--  <bean id="kurikulumRedis" class="id.its.akademik.dao.redis.RedisKurikulumDao">
+		<property name="redisTemplate" ref="redisTemplate"/>  -->
+	</bean>
+	
+	
+</beans>

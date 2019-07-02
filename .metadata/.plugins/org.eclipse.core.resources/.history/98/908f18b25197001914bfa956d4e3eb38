@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:context="http://www.springframework.org/schema/context"  
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+  <context:component-scan base-package="com.concretepage" />
+  
+  <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig"
+      p:test-on-borrow="true" p:test-on-return="true"/>
+  
+  <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+       p:host-name="localhost" p:port="6379" p:use-pool="true">
+          <constructor-arg ref="jedisPoolConfig"/>
+  </bean>
+  
+  <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate" 
+       p:connection-factory-ref="jedisConnectionFactory" p:enable-transaction-support="true"/>
+  
+  <bean id="stringRedisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate" 
+       p:connection-factory-ref="jedisConnectionFactory" p:enable-transaction-support="true"/>  
+</beans> 

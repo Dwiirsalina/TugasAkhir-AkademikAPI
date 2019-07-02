@@ -1,0 +1,28 @@
+package id.its.akademik.dao.redis;
+
+import java.util.List;
+
+import id.its.akademik.dao.cache.AbstractCache;
+import id.its.akademik.dao.cache.AkademikCache;
+import id.its.akademik.domain.DaftarNilai;
+
+public class RedisAkademikDao extends AbstractCache implements AkademikCache{
+
+	@Override
+	public Boolean checkKey(String key) {
+		return this.checkKeyinRedis(key);
+	}
+
+	@Override
+	public void setTranskripMhs(String key, List<DaftarNilai> list) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<DaftarNilai> getTranskripMhs(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

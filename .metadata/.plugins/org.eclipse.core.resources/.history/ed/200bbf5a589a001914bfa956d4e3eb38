@@ -1,0 +1,16 @@
+package id.its.akademik.dao.redis;
+
+import java.util.List;
+
+import id.its.akademik.dao.cache.KelembagaanCache;
+import id.its.akademik.domain.ProdiAjar;
+
+public class RedisKelembagaanDao implements KelembagaanCache{
+
+	@Override
+	public List<ProdiAjar> getProdiAjar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

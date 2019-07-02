@@ -1,0 +1,8 @@
+package id.its.akademik.config;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class RedisConfig {
+
+}

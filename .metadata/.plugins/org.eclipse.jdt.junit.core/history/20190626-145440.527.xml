@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="KurikulumEndpointTest" project="akademik-api" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="id.its.akademik.endpoint.test.KurikulumEndpointTest" time="30.601">
+    <testcase name="canGetFakultas" classname="id.its.akademik.endpoint.test.KurikulumEndpointTest" time="30.601">
+      <error>java.lang.IllegalStateException: Failed to load ApplicationContext&#13;
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)&#13;
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)&#13;
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)&#13;
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)&#13;
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'akademikDataSource' defined in class path resource [akademik-db-config.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.zaxxer.hikari.HikariDataSource]: Constructor threw exception; nested exception is com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: The TCP/IP connection to the host 10.199.2.23, port 1433 has failed. Error: "Connection timed out: no further information.. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".&#13;
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:289)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)&#13;
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)&#13;
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)&#13;
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)&#13;
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)&#13;
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)&#13;
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)&#13;
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)&#13;
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)&#13;
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)&#13;
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)&#13;
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)&#13;
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)&#13;
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)&#13;
+	... 25 more&#13;
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.zaxxer.hikari.HikariDataSource]: Constructor threw exception; nested exception is com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: The TCP/IP connection to the host 10.199.2.23, port 1433 has failed. Error: "Connection timed out: no further information.. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".&#13;
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:164)&#13;
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:125)&#13;
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:281)&#13;
+	... 42 more&#13;
+Caused by: com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: The TCP/IP connection to the host 10.199.2.23, port 1433 has failed. Error: "Connection timed out: no further information.. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".&#13;
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:516)&#13;
+	at com.zaxxer.hikari.pool.HikariPool.&lt;init&gt;(HikariPool.java:118)&#13;
+	at com.zaxxer.hikari.HikariDataSource.&lt;init&gt;(HikariDataSource.java:71)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:148)&#13;
+	... 44 more&#13;
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host 10.199.2.23, port 1433 has failed. Error: "Connection timed out: no further information.. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:228)&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerException.ConvertConnectExceptionToSQLServerException(SQLServerException.java:285)&#13;
+	at com.microsoft.sqlserver.jdbc.SocketFinder.findSocket(IOBuffer.java:2437)&#13;
+	at com.microsoft.sqlserver.jdbc.TDSChannel.open(IOBuffer.java:641)&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2245)&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerDataSource.getConnectionInternal(SQLServerDataSource.java:1031)&#13;
+	at com.microsoft.sqlserver.jdbc.SQLServerDataSource.getConnection(SQLServerDataSource.java:69)&#13;
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:316)&#13;
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:506)&#13;
+	... 51 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

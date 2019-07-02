@@ -1,0 +1,53 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<import resource="classpath:akademik-data-beans.xml" />
+	<import resource="classpath:akademik-redis-data.xml" />
+
+	<bean id="fakultasEndpoint" class="id.its.akademik.endpoint.FakultasEndpoint">
+		<property name="kelembagaanDao" ref="kelembagaanDao"></property>
+	</bean>
+
+	<bean id="prodiEndpoint" class="id.its.akademik.endpoint.ProdiEndpoint">
+		<property name="akademikService" ref="akademikService"></property>
+		<property name="kurikulumDao" ref="kurikulumDao"></property>
+		<property name="kelembagaanDao" ref="kelembagaanDao"></property>
+		<property name="kelembagaanCache" ref="kelembagaanRedis"></property>
+	<!-- 	<property name="kurikulumCache" ref="kurikulumRedis"></property>  -->
+	</bean>
+
+	<bean id="dosenEndpoint" class="id.its.akademik.endpoint.DosenEndpoint">
+		<property name="mahasiswaDao" ref="mhsDao"></property>
+		<property name="pegawaiDao" ref="pegawaiDao"></property>
+		<property name="akademikDao" ref="akademikDao"></property>
+	</bean>
+	<bean id="mahasiswaEndpoint" class="id.its.akademik.endpoint.MahasiswaEndpoint">
+		<property name="mahasiswaDao" ref="mhsDao"></property>
+		<property name="akademikDao" ref="akademikDao"></property>
+		<property name="akademikService" ref="akademikService"></property>
+	</bean>
+
+	<bean id="frsEndpoint" class="id.its.akademik.endpoint.FRSEndpoint">
+		<property name="mahasiswaDao" ref="mhsDao"></property>
+		<property name="akademikDao" ref="akademikDao"></property>
+		<property name="sppDao" ref="sppDao"></property>
+	</bean>
+
+	<bean id="ipdEndpoint" class="id.its.akademik.endpoint.IPDEndpoint">
+		<property name="akademikDao" ref="akademikDao"></property>
+	</bean>
+	
+	<bean id="basicEndpoint" class="id.its.akademik.endpoint.BasicEndpoint">
+		<property name="akademikDao" ref="akademikDao"></property>
+	</bean>
+	
+	<bean id="waliEndpoint" class="id.its.akademik.endpoint.WaliEndpoint">
+		<property name="waliDao" ref="waliDao"></property>
+		<property name="mahasiswaDao" ref="mhsDao"></property>
+	</bean>
+	
+	<bean id="baseEndpoint" class="id.its.akademik.endpoint.BaseService">
+	</bean>
+
+</beans>

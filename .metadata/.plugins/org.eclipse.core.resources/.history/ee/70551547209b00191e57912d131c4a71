@@ -1,0 +1,214 @@
+package id.its.akademik.dao.redis;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import id.its.akademik.dao.cache.AbstractCache;
+import id.its.akademik.dao.cache.MahasiswaCache;
+import id.its.akademik.domain.Akademik;
+import id.its.akademik.domain.JadwalKuliah;
+import id.its.akademik.domain.KemajuanStudi;
+import id.its.akademik.domain.Kuesioner;
+import id.its.akademik.domain.Kurikulum;
+import id.its.akademik.domain.Mahasiswa;
+import id.its.akademik.domain.OrangTua;
+import id.its.akademik.domain.Pekerjaan;
+import id.its.akademik.domain.PeriodeMahasiswa;
+import id.its.akademik.domain.ProdiAjar;
+
+public class RedisMahasiswaDao extends AbstractCache implements MahasiswaCache {
+
+	@Override
+	public Boolean checkKey(String key) {
+		return this.checkKeyinRedis(key);
+	}
+
+	@Override
+	public void setJadwalKuliah(String key, List<JadwalKuliah> list) {
+		List<Object> objects=new ArrayList();
+		for(JadwalKuliah jadwalKuliah:list)
+		{
+			Object object=(Object) jadwalKuliah;
+			objects.add(object);
+		}
+		this.setListOperation(key, objects);
+		
+	}
+
+	@Override
+	public List<JadwalKuliah> getJadwalKuliah(String key) {
+		List<Object> objects=this.getListOperations(key);
+		List<JadwalKuliah> jadwalKuliah=new ArrayList();
+		
+		for(Object object:objects)
+		{
+			JadwalKuliah jadwal_=(JadwalKuliah) object;
+			jadwalKuliah.add(jadwal_);
+		}
+		return jadwalKuliah;
+	}
+	
+	@Override
+	public void setPeriodeMhs(String key, List<PeriodeMahasiswa> list) {
+		List<Object> objects=new ArrayList();
+		for(PeriodeMahasiswa periodeMhs:list)
+		{
+			Object object=(Object) periodeMhs;
+			objects.add(object);
+		}
+		this.setListOperation(key, objects);
+		
+	}
+
+	@Override
+	public List<PeriodeMahasiswa> getPeriodeMhs(String key) {
+		List<Object> objects=this.getListOperations(key);
+		List<PeriodeMahasiswa> periodeMhs=new ArrayList();
+		
+		for(Object object:objects)
+		{
+			PeriodeMahasiswa periode_mhs=(PeriodeMahasiswa) object;
+			periodeMhs.add(periode_mhs);
+		}
+		return periodeMhs;
+	}
+
+	@Override
+	public void setKemajuanMhs(String key, List<KemajuanStudi> list) {
+		List<Object> objects=new ArrayList();
+		for(KemajuanStudi kemajuan_studi:list)
+		{
+			Object object=(Object) kemajuan_studi;
+			objects.add(object);
+		}
+		this.setListOperation(key, objects);
+		
+	}
+
+	@Override
+	public List<KemajuanStudi> getKemajuanMhs(String key) {
+		List<Object> objects=this.getListOperations(key);
+		List<KemajuanStudi> kemajuan_studi=new ArrayList();
+		
+		for(Object object:objects)
+		{
+			KemajuanStudi progressMhs=(KemajuanStudi) object;
+			kemajuan_studi.add(progressMhs);
+		}
+		return kemajuan_studi;
+	}
+	
+	@Override
+	public void setAkademikMhs(String key,List<Akademik> list) {
+		List<Object> objects=new ArrayList();
+		for(Akademik akademik:list)
+		{
+			Object object=(Object) akademik;
+			objects.add(object);
+		}
+		this.setListOperation(key, objects);
+		
+	}
+
+	@Override
+	public List<Akademik> getAkademikMhs(String key) {
+		List<Object> objects=this.getListOperations(key);
+		List<Akademik> listAkademik=new ArrayList();
+		
+		for(Object object:objects)
+		{
+			Akademik akademik=(Akademik) object;
+			listAkademik.add(akademik);
+		}
+		return listAkademik;
+	}
+
+	@Override
+	public void setMahasiswaWali(String key, List<Mahasiswa> list) {
+		List<Object> objects=new ArrayList();
+		for(Mahasiswa mhswali:list)
+		{
+			Object object=(Object) mhswali;
+			objects.add(object);
+		}
+		this.setListOperation(key, objects);
+		
+	}
+
+	@Override
+	public List<Mahasiswa> getMahasiswaWali(String key) {
+		List<Object> objects=this.getListOperations(key);
+		List<Mahasiswa> listMhsWali=new ArrayList();
+		
+		for(Object object:objects)
+		{
+			Mahasiswa mhswali=(Mahasiswa) object;
+			listMhsWali.add(mhswali);
+		}
+		return listMhsWali;
+	}
+
+	@Override
+	public void setOrtuMhs(String key, List<OrangTua> list) {
+		List<Object> objects=new ArrayList();
+		for(OrangTua orangtua:list)
+		{
+			Object object=(Object) orangtua;
+			objects.add(object);
+		}
+		this.setListOperation(key, objects);
+		
+	}
+
+	@Override
+	public List<OrangTua> getOrtuMhs(String key) {
+		List<Object> objects=this.getListOperations(key);
+		List<OrangTua> ortuMhs=new ArrayList();
+		
+		for(Object object:objects)
+		{
+			OrangTua orangtua=(OrangTua) object;
+			ortuMhs.add(orangtua);
+		}
+		return ortuMhs;
+	}
+
+	@Override
+	public void setPekerjaan(String key, List<Pekerjaan> list) {
+		List<Object> objects=new ArrayList();
+		for(Pekerjaan pekerjaan:list)
+		{
+			Object object=(Object) pekerjaan;
+			objects.add(object);
+		}
+		this.setListOperation(key, objects);
+		
+	}
+
+	@Override
+	public List<Pekerjaan> getPekerjaan(String key) {
+		List<Object> objects=this.getListOperations(key);
+		List<Pekerjaan> pekerjaanMhs=new ArrayList();
+		
+		for(Object object:objects)
+		{
+			Pekerjaan pekerjaan=(Pekerjaan) object;
+			pekerjaanMhs.add(pekerjaan);
+		}
+		return pekerjaanMhs;
+	}
+
+	@Override
+	public void setPertanyaanDosen(String key, List<Kuesioner> list) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Kuesioner> getPertanyaanDosen(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+}

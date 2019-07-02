@@ -1,0 +1,12 @@
+package id.its.akademik.dao.cache;
+
+import java.util.List;
+
+import id.its.akademik.domain.Kurikulum;
+
+public interface MahasiswaCache {
+	Boolean checkKey(String key);
+	void setMataKuliahKurikulum(String key,List<Kurikulum> list);
+	List<Kurikulum> getMataKuliahKurikulum(String key);
+
+}

@@ -1,0 +1,46 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- DB AKAD -->
+
+	<bean id="akademikProdHikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="poolName" value="dbAkadPool" />
+		<property name="connectionTestQuery" value="SELECT 1" />
+		<property name="dataSourceClassName"
+			value="com.microsoft.sqlserver.jdbc.SQLServerDataSource" />
+		<property name="maximumPoolSize" value="10" />
+		<property name="idleTimeout" value="10000" />
+		<property name="dataSourceProperties">
+			<props>
+				<prop key="url">jdbc:sqlserver://localhost:1433;databaseName=DBNAME;
+				</prop>
+				<prop key="user">username</prop>
+				<prop key="password">username</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="akademikDevHikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="poolName" value="dbAkadPool" />
+		<property name="connectionTestQuery" value="SELECT 1" />
+		<property name="dataSourceClassName"
+			value="com.microsoft.sqlserver.jdbc.SQLServerDataSource" />
+		<property name="maximumPoolSize" value="10" />
+		<property name="idleTimeout" value="10000" />
+		<property name="dataSourceProperties">
+			<props>
+				<prop key="url">jdbc:sqlserver://10.199.2.23:1433;databaseName=SIAKAD;
+				</prop>
+				<prop key="user">akademik_api</prop>
+				<prop key="password">78d93d46ea</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="akademikDataSource" class="com.zaxxer.hikari.HikariDataSource"
+		destroy-method="close">
+		<constructor-arg ref="akademikDevHikariConfig" />
+	</bean>
+
+</beans>

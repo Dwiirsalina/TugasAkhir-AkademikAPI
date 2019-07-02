@@ -1,0 +1,28 @@
+package id.its.akademik.dao.redis;
+
+import java.util.List;
+
+import id.its.akademik.dao.cache.AbstractCache;
+import id.its.akademik.dao.cache.PegawaiCache;
+import id.its.akademik.domain.Mahasiswa;
+
+public class RedisPegawaiDao extends AbstractCache implements PegawaiCache {
+
+	@Override
+	public Boolean checkKey(String key) {
+		return this.checkKeyinRedis(key);
+	}
+
+	@Override
+	public void setMahasiswaWali(String key, List<Mahasiswa> list) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Mahasiswa> getMahasiswaWali(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

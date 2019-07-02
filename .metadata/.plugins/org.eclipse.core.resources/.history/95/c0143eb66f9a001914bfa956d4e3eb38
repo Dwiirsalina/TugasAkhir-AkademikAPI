@@ -1,0 +1,30 @@
+package id.its.akademik.dao.redis;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import id.its.akademik.dao.cache.AbstractCache;
+import id.its.akademik.dao.cache.KurikulumCache;
+import id.its.akademik.domain.Kurikulum;
+
+public class RedisKurikulumDao extends AbstractCache implements KurikulumCache{
+
+	@Override
+	public Boolean checkKey(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setKurikulum(String key, List<Kurikulum> list) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Kurikulum> getMatakuliahKurikulum(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}	
+
+}

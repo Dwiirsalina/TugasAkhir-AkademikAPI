@@ -1,0 +1,5 @@
+package id.its.akademik.config;
+
+public class RedisConfig {
+
+}
