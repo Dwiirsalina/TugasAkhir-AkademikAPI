@@ -77,12 +77,12 @@
 			<version>4.2.0.RELEASE</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+<!--  		<dependency>
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-transports-http-jetty</artifactId>
 			<version>${cxf.version}</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>id.its</groupId>
 			<artifactId>integra-security</artifactId>

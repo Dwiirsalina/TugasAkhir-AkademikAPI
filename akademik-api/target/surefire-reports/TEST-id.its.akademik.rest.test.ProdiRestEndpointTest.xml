@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="id.its.akademik.rest.test.ProdiRestEndpointTest" time="3.414" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="id.its.akademik.rest.test.ProdiRestEndpointTest" time="2.104" errors="3" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\bin"/>
     <property name="java.vm.version" value="25.201-b09"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="E:\Tugas Akhir\akademik-api"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\TA-Git\TugasAkhir-AkademikAPI\akademik-api"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="java.rmi.server.randomIDs" value="true"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="E:\Tugas Akhir\akademik-api"/>
+    <property name="user.dir" value="E:\TA-Git\TugasAkhir-AkademikAPI\akademik-api"/>
     <property name="java.runtime.version" value="1.8.0_201-b09"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\endorsed"/>
@@ -28,9 +28,9 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="E:\Tugas Akhir\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7760451295221276322.tmp"/>
+    <property name="classworlds.conf" value="E:\TA-Git\TugasAkhir-AkademikAPI\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3809500120040248345.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/opt/Java/jdk1.8.0_201/bin/../jre/bin/server;C:/opt/Java/jdk1.8.0_201/bin/../jre/bin;C:/opt/Java/jdk1.8.0_201/bin/../jre/lib/amd64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\opt\apache-maven-3.6.0\apache-maven-3.6.0\bin;C:\opt\Java\jdk1.8.0_201\bin;C:\Users\dwiir\AppData\Local\Microsoft\WindowsApps;C:\Users\dwiir\AppData\Local\GitHubDesktop\bin;;E:\sts\sts-4.1.1.RELEASE;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_201/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_201/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_201/bin/../jre/lib/amd64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\opt\apache-maven-3.6.0\apache-maven-3.6.0\bin;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files\Git\cmd;C:\Users\dwiir\AppData\Local\Microsoft\WindowsApps;C:\Users\dwiir\AppData\Local\GitHubDesktop\bin;;E:\sts\sts-4.1.1.RELEASE;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -54,7 +54,7 @@
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_201\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="E:\Tugas Akhir\akademik-api\EMBEDDED"/>
+    <property name="maven.home" value="E:\TA-Git\TugasAkhir-AkademikAPI\akademik-api\EMBEDDED"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -62,7 +62,997 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="id.its.akademik.rest.test.ProdiRestEndpointTest" name="canGetSyaratMataKuliah" time="3.326"/>
-  <testcase classname="id.its.akademik.rest.test.ProdiRestEndpointTest" name="canGetIPD" time="0.074"/>
-  <testcase classname="id.its.akademik.rest.test.ProdiRestEndpointTest" name="canGetProdi" time="0.014"/>
+  <testcase classname="id.its.akademik.rest.test.ProdiRestEndpointTest" name="canGetSyaratMataKuliah" time="1.014">
+    <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;testCxfServer&apos;: Invocation of init method failed; nested exception is org.apache.cxf.service.factory.ServiceConstructionException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 31 more
+Caused by: org.apache.cxf.service.factory.ServiceConstructionException
+	at org.apache.cxf.jaxrs.JAXRSServerFactoryBean.create(JAXRSServerFactoryBean.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1681)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 46 more
+Caused by: java.io.IOException: Cannot find any registered HttpDestinationFactory from the Bus.
+	at org.apache.cxf.transport.http.HTTPTransportFactory.getDestination(HTTPTransportFactory.java:296)
+	at org.apache.cxf.endpoint.ServerImpl.initDestination(ServerImpl.java:83)
+	at org.apache.cxf.endpoint.ServerImpl.&lt;init&gt;(ServerImpl.java:62)
+	at org.apache.cxf.jaxrs.JAXRSServerFactoryBean.create(JAXRSServerFactoryBean.java:165)
+	... 53 more
+</error>
+    <system-out>11:47:51.589 [main] DEBUG org.apache.cxf.configuration.spring.AbstractBeanDefinitionParser - Adding org.apache.cxf.configuration.spring.AbstractBeanDefinitionParser.wireBus attribute PROPERTY to bean org.springframework.beans.factory.support.BeanDefinitionBuilder@c00fff0
+11:47:51.641 [main] DEBUG com.zaxxer.hikari.HikariConfig - dbAkadPool - configuration:
+11:47:51.642 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:47:51.642 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:47:51.642 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................null
+11:47:51.642 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............null
+11:47:51.642 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............&quot;SELECT 1&quot;
+11:47:51.642 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:47:51.642 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................null
+11:47:51.642 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............&quot;com.microsoft.sqlserver.jdbc.SQLServerDataSource&quot;
+11:47:51.642 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................null
+11:47:51.643 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{user=akademik_api, url=jdbc:sqlserver://10.199.2.23:1433;databaseName=SIAKAD;, password=&lt;masked&gt;}
+11:47:51.643 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName.................null
+11:47:51.643 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:47:51.643 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............null
+11:47:51.643 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................10000
+11:47:51.643 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailFast..........true
+11:47:51.643 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:47:51.643 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbc4ConnectionTest.............false
+11:47:51.643 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................null
+11:47:51.645 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:47:51.645 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:47:51.645 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:47:51.645 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................null
+11:47:51.645 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........null
+11:47:51.645 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:47:51.645 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................&lt;masked&gt;
+11:47:51.645 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................&quot;dbAkadPool&quot;
+11:47:51.646 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:47:51.646 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:47:51.646 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutorService........null
+11:47:51.646 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................null
+11:47:51.647 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............null
+11:47:51.648 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................null
+11:47:51.648 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:47:51.648 [main] INFO com.zaxxer.hikari.HikariDataSource - dbAkadPool - Started.
+11:47:51.690 [main] DEBUG com.zaxxer.hikari.HikariConfig - dbIntegraPool - configuration:
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................null
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............null
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............&quot;SELECT 1&quot;
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................null
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............&quot;com.microsoft.sqlserver.jdbc.SQLServerDataSource&quot;
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................null
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{user=readonly, url=jdbc:sqlserver://oltp.its.ac.id:1433;databaseName=ITSGATE;, password=&lt;masked&gt;}
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName.................null
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............null
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................10000
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailFast..........true
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbc4ConnectionTest.............false
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................null
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................null
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........null
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................&lt;masked&gt;
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................&quot;dbIntegraPool&quot;
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutorService........null
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................null
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............null
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................null
+11:47:51.691 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:47:51.691 [main] INFO com.zaxxer.hikari.HikariDataSource - dbIntegraPool - Started.
+11:47:51.724 [main] DEBUG com.zaxxer.hikari.HikariConfig - dbIntegraPool - configuration:
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................null
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............null
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............&quot;SELECT 1&quot;
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................null
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............&quot;com.microsoft.sqlserver.jdbc.SQLServerDataSource&quot;
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................null
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{user=readonly, url=jdbc:sqlserver://oltp.its.ac.id:1433;databaseName=ITSOIDC;, password=&lt;masked&gt;}
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName.................null
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............null
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................10000
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailFast..........true
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:47:51.725 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbc4ConnectionTest.............false
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................null
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................null
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........null
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................&lt;masked&gt;
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................&quot;dbIntegraPool&quot;
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutorService........null
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................null
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............null
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................null
+11:47:51.726 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:47:51.726 [main] INFO com.zaxxer.hikari.HikariDataSource - dbIntegraPool - Started.
+11:47:51.773 [dbAkadPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Pool stats (total=0, active=0, idle=0, waiting=0)
+11:47:51.797 [dbAkadPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Added connection ConnectionID:26 ClientConnectionId: 3bb50671-f271-4662-9bd4-387df593d56c
+11:47:51.821 [dbAkadPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Added connection ConnectionID:27 ClientConnectionId: ff95c005-46cc-4604-b1e6-954a8f7e0eb1
+11:47:51.840 [dbAkadPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Added connection ConnectionID:28 ClientConnectionId: 303fc7b1-00af-4ae3-88e1-ee74d674f55e
+11:47:51.859 [dbIntegraPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Pool stats (total=0, active=0, idle=0, waiting=0)
+11:47:51.861 [dbAkadPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Added connection ConnectionID:29 ClientConnectionId: 5f166155-8544-4142-9283-2dcf1b0795c4
+11:47:51.881 [dbAkadPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Added connection ConnectionID:30 ClientConnectionId: 976cb981-f71e-44bc-9e57-3c26e2c18042
+11:47:51.883 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:31 ClientConnectionId: b1d6759a-a09d-4fd7-b75b-c413d994cdd4
+11:47:51.909 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:33 ClientConnectionId: 6a2a55eb-2401-4a5a-af24-d54726e8ad84
+11:47:51.917 [dbAkadPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Added connection ConnectionID:32 ClientConnectionId: 49054e5c-4daf-467a-9040-9836dbf06c36
+11:47:51.930 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:34 ClientConnectionId: a3b9f08a-7715-4d6a-9e65-b2ddfe4a111a
+11:47:51.937 [dbAkadPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Added connection ConnectionID:35 ClientConnectionId: da59d040-c3d9-4634-8c1b-6a3fe8614eab
+11:47:51.950 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:36 ClientConnectionId: 9f7d4f16-79e0-41db-bdba-5e9acc82a892
+11:47:51.956 [dbAkadPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Added connection ConnectionID:37 ClientConnectionId: b5e68c0b-c28e-4537-87be-b939d7fcd6d7
+11:47:51.968 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:38 ClientConnectionId: 3e2c0ece-cf29-4dcd-b98c-9a5ec5c40184
+11:47:51.975 [dbAkadPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Added connection ConnectionID:39 ClientConnectionId: c83bf0b8-6652-4bdf-a1a1-654d4eab377e
+11:47:51.989 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:40 ClientConnectionId: 4954c9a2-5ccd-467c-adeb-2a9d7e6eb4cc
+11:47:51.995 [dbAkadPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Added connection ConnectionID:41 ClientConnectionId: df2dd91c-9c12-4f9d-bee2-bef315291104
+11:47:51.995 [dbAkadPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - After adding stats (total=10, active=0, idle=10, waiting=0)
+11:47:52.009 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:42 ClientConnectionId: 71652c4f-b5bf-46a9-ad1f-9ae4692b9167
+11:47:52.027 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:43 ClientConnectionId: 92016cf6-3a73-4251-9446-5905182d875e
+11:47:52.049 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:44 ClientConnectionId: 24ed84a6-880c-4fbb-947f-a04683f111f5
+11:47:52.072 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:45 ClientConnectionId: 89cc9acd-1664-417e-8357-33cd636393ac
+11:47:52.072 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - After adding stats (total=10, active=0, idle=10, waiting=0)
+11:47:52.159 [dbIntegraPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Pool stats (total=0, active=0, idle=0, waiting=0)
+11:47:52.183 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:46 ClientConnectionId: a8626f9b-6278-4b0c-8dc9-1ad6d34d5831
+11:47:52.201 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:47 ClientConnectionId: b9095f33-31d3-4271-9ce9-617d9ccee676
+11:47:52.216 [main] DEBUG org.apache.cxf.jaxrs.utils.AnnotationUtils - No Java Servlet API is available on the runtime classpath
+11:47:52.219 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:48 ClientConnectionId: 2b930fad-4a39-4101-836c-08ad0a1b1a39
+11:47:52.235 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:49 ClientConnectionId: d9d91a39-9e6b-4d6f-993e-c0caa479908f
+11:47:52.255 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:50 ClientConnectionId: be7f8e71-ea1c-4d00-a3d8-3c69f8379d30
+11:47:52.272 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:51 ClientConnectionId: 7f381a54-3c0a-4629-947d-5645ef029d29
+11:47:52.273 [main] DEBUG org.apache.cxf.configuration.spring.ConfigurerImpl - Could not determine bean name for instance of class org.apache.cxf.bus.managers.CXFBusLifeCycleManager.
+11:47:52.274 [main] DEBUG org.apache.cxf.configuration.spring.ConfigurerImpl - Could not determine bean name for instance of class org.apache.cxf.bus.managers.ServerRegistryImpl.
+11:47:52.291 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:52 ClientConnectionId: d2a2040d-866b-4aac-9351-40cee1b5db3d
+11:47:52.298 [main] DEBUG org.apache.cxf.configuration.spring.ConfigurerImpl - Could not determine bean name for instance of class org.apache.cxf.binding.xml.XMLBindingFactory.
+11:47:52.302 [main] DEBUG org.apache.cxf.configuration.spring.ConfigurerImpl - Could not determine bean name for instance of class org.apache.cxf.service.factory.FactoryBeanListenerManager.
+11:47:52.310 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:53 ClientConnectionId: 1684ca2f-206a-4904-8b46-d5b8f063c830
+11:47:52.327 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:54 ClientConnectionId: b4d9717d-04e5-49bd-b622-df0826401c75
+11:47:52.345 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Added connection ConnectionID:55 ClientConnectionId: 4f610ebc-1efb-4410-9458-3d55a11b8661
+11:47:52.345 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - After adding stats (total=10, active=0, idle=10, waiting=0)
+11:47:52.352 [main] DEBUG org.apache.cxf.configuration.spring.ConfigurerImpl - Could not determine bean name for instance of class org.apache.cxf.transport.http.HTTPTransportFactory.
+11:47:52.376 [main] ERROR org.apache.cxf.transport.http.HTTPTransportFactory - Cannot find any registered HttpDestinationFactory from the Bus.
+11:47:52.377 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Close initiated...
+11:47:52.377 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Before closing stats (total=10, active=0, idle=10, waiting=0)
+11:47:52.384 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:46 ClientConnectionId: a8626f9b-6278-4b0c-8dc9-1ad6d34d5831: (connection evicted)
+11:47:52.385 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:47 ClientConnectionId: b9095f33-31d3-4271-9ce9-617d9ccee676: (connection evicted)
+11:47:52.386 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:48 ClientConnectionId: 2b930fad-4a39-4101-836c-08ad0a1b1a39: (connection evicted)
+11:47:52.386 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:49 ClientConnectionId: d9d91a39-9e6b-4d6f-993e-c0caa479908f: (connection evicted)
+11:47:52.387 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:50 ClientConnectionId: be7f8e71-ea1c-4d00-a3d8-3c69f8379d30: (connection evicted)
+11:47:52.387 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:51 ClientConnectionId: 7f381a54-3c0a-4629-947d-5645ef029d29: (connection evicted)
+11:47:52.388 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:52 ClientConnectionId: d2a2040d-866b-4aac-9351-40cee1b5db3d: (connection evicted)
+11:47:52.390 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:53 ClientConnectionId: 1684ca2f-206a-4904-8b46-d5b8f063c830: (connection evicted)
+11:47:52.390 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:54 ClientConnectionId: b4d9717d-04e5-49bd-b622-df0826401c75: (connection evicted)
+11:47:52.390 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:55 ClientConnectionId: 4f610ebc-1efb-4410-9458-3d55a11b8661: (connection evicted)
+11:47:52.392 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - After closing stats (total=0, active=0, idle=0, waiting=0)
+11:47:52.392 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Closed.
+11:47:52.392 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Close initiated...
+11:47:52.392 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Before closing stats (total=10, active=0, idle=10, waiting=0)
+11:47:52.394 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:31 ClientConnectionId: b1d6759a-a09d-4fd7-b75b-c413d994cdd4: (connection evicted)
+11:47:52.394 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:33 ClientConnectionId: 6a2a55eb-2401-4a5a-af24-d54726e8ad84: (connection evicted)
+11:47:52.395 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:34 ClientConnectionId: a3b9f08a-7715-4d6a-9e65-b2ddfe4a111a: (connection evicted)
+11:47:52.395 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:36 ClientConnectionId: 9f7d4f16-79e0-41db-bdba-5e9acc82a892: (connection evicted)
+11:47:52.396 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:38 ClientConnectionId: 3e2c0ece-cf29-4dcd-b98c-9a5ec5c40184: (connection evicted)
+11:47:52.396 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:40 ClientConnectionId: 4954c9a2-5ccd-467c-adeb-2a9d7e6eb4cc: (connection evicted)
+11:47:52.396 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:42 ClientConnectionId: 71652c4f-b5bf-46a9-ad1f-9ae4692b9167: (connection evicted)
+11:47:52.396 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:43 ClientConnectionId: 92016cf6-3a73-4251-9446-5905182d875e: (connection evicted)
+11:47:52.397 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:44 ClientConnectionId: 24ed84a6-880c-4fbb-947f-a04683f111f5: (connection evicted)
+11:47:52.397 [dbIntegraPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbIntegraPool - Closing connection ConnectionID:45 ClientConnectionId: 89cc9acd-1664-417e-8357-33cd636393ac: (connection evicted)
+11:47:52.397 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - After closing stats (total=0, active=0, idle=0, waiting=0)
+11:47:52.397 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Closed.
+11:47:52.398 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Close initiated...
+11:47:52.398 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Before closing stats (total=10, active=0, idle=10, waiting=0)
+11:47:52.400 [dbAkadPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbAkadPool - Closing connection ConnectionID:26 ClientConnectionId: 3bb50671-f271-4662-9bd4-387df593d56c: (connection evicted)
+11:47:52.400 [dbAkadPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbAkadPool - Closing connection ConnectionID:27 ClientConnectionId: ff95c005-46cc-4604-b1e6-954a8f7e0eb1: (connection evicted)
+11:47:52.401 [dbAkadPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbAkadPool - Closing connection ConnectionID:28 ClientConnectionId: 303fc7b1-00af-4ae3-88e1-ee74d674f55e: (connection evicted)
+11:47:52.401 [dbAkadPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbAkadPool - Closing connection ConnectionID:29 ClientConnectionId: 5f166155-8544-4142-9283-2dcf1b0795c4: (connection evicted)
+11:47:52.401 [dbAkadPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbAkadPool - Closing connection ConnectionID:30 ClientConnectionId: 976cb981-f71e-44bc-9e57-3c26e2c18042: (connection evicted)
+11:47:52.401 [dbAkadPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbAkadPool - Closing connection ConnectionID:32 ClientConnectionId: 49054e5c-4daf-467a-9040-9836dbf06c36: (connection evicted)
+11:47:52.401 [dbAkadPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbAkadPool - Closing connection ConnectionID:35 ClientConnectionId: da59d040-c3d9-4634-8c1b-6a3fe8614eab: (connection evicted)
+11:47:52.401 [dbAkadPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbAkadPool - Closing connection ConnectionID:37 ClientConnectionId: b5e68c0b-c28e-4537-87be-b939d7fcd6d7: (connection evicted)
+11:47:52.401 [dbAkadPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbAkadPool - Closing connection ConnectionID:39 ClientConnectionId: c83bf0b8-6652-4bdf-a1a1-654d4eab377e: (connection evicted)
+11:47:52.401 [dbAkadPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbAkadPool - Closing connection ConnectionID:41 ClientConnectionId: df2dd91c-9c12-4f9d-bee2-bef315291104: (connection evicted)
+11:47:52.402 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - After closing stats (total=0, active=0, idle=0, waiting=0)
+11:47:52.402 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Closed.
+</system-out>
+    <system-err>Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [test-context.xml]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-endpoint-beans.xml]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-data-beans.xml]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-db-config.xml]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-redis-config.xml]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-redis-data.xml]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-redis-config.xml]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;jedisConnectionFactory&apos;: replacing [Generic bean: class [org.springframework.data.redis.connection.jedis.JedisConnectionFactory]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.connection.jedis.JedisConnectionFactory]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;sentinelConfig&apos;: replacing [Generic bean: class [org.springframework.data.redis.connection.RedisSentinelConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.connection.RedisSentinelConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;sentinels&apos;: replacing [Generic bean: class [org.springframework.beans.factory.config.SetFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Generic bean: class [org.springframework.beans.factory.config.SetFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;sentinel1&apos;: replacing [Generic bean: class [org.springframework.data.redis.connection.RedisNode]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.connection.RedisNode]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;sentinel2&apos;: replacing [Generic bean: class [org.springframework.data.redis.connection.RedisNode]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.connection.RedisNode]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;stringRedisSerializer&apos;: replacing [Generic bean: class [org.springframework.data.redis.serializer.StringRedisSerializer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.serializer.StringRedisSerializer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;jsonRedisSerializer&apos;: replacing [Generic bean: class [org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;redisTemplate&apos;: replacing [Generic bean: class [org.springframework.data.redis.core.RedisTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.core.RedisTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [integra-filter-beans.xml]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [integra-service-beans.xml]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [integra-data-beans.xml]
+Jul 02, 2019 11:47:51 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [integra-db-config.xml]
+Jul 02, 2019 11:47:51 AM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.GenericApplicationContext@307765b4: startup date [Tue Jul 02 11:47:51 ICT 2019]; root of context hierarchy
+Jul 02, 2019 11:47:52 AM org.springframework.test.context.TestContextManager prepareTestInstance
+SEVERE: Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@70807224] to prepare test instance [id.its.akademik.rest.test.ProdiRestEndpointTest@7e97551f]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;testCxfServer&apos;: Invocation of init method failed; nested exception is org.apache.cxf.service.factory.ServiceConstructionException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 31 more
+Caused by: org.apache.cxf.service.factory.ServiceConstructionException
+	at org.apache.cxf.jaxrs.JAXRSServerFactoryBean.create(JAXRSServerFactoryBean.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1681)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 46 more
+Caused by: java.io.IOException: Cannot find any registered HttpDestinationFactory from the Bus.
+	at org.apache.cxf.transport.http.HTTPTransportFactory.getDestination(HTTPTransportFactory.java:296)
+	at org.apache.cxf.endpoint.ServerImpl.initDestination(ServerImpl.java:83)
+	at org.apache.cxf.endpoint.ServerImpl.&lt;init&gt;(ServerImpl.java:62)
+	at org.apache.cxf.jaxrs.JAXRSServerFactoryBean.create(JAXRSServerFactoryBean.java:165)
+	... 53 more
+
+</system-err>
+  </testcase>
+  <testcase classname="id.its.akademik.rest.test.ProdiRestEndpointTest" name="canGetIPD" time="0.361">
+    <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;testCxfServer&apos;: Invocation of init method failed; nested exception is org.apache.cxf.service.factory.ServiceConstructionException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 31 more
+Caused by: org.apache.cxf.service.factory.ServiceConstructionException
+	at org.apache.cxf.jaxrs.JAXRSServerFactoryBean.create(JAXRSServerFactoryBean.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1681)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 46 more
+Caused by: java.io.IOException: Cannot find any registered HttpDestinationFactory from the Bus.
+	at org.apache.cxf.transport.http.HTTPTransportFactory.getDestination(HTTPTransportFactory.java:296)
+	at org.apache.cxf.endpoint.ServerImpl.initDestination(ServerImpl.java:83)
+	at org.apache.cxf.endpoint.ServerImpl.&lt;init&gt;(ServerImpl.java:62)
+	at org.apache.cxf.jaxrs.JAXRSServerFactoryBean.create(JAXRSServerFactoryBean.java:165)
+	... 53 more
+</error>
+    <system-out>11:47:52.561 [main] DEBUG org.apache.cxf.configuration.spring.AbstractBeanDefinitionParser - Adding org.apache.cxf.configuration.spring.AbstractBeanDefinitionParser.wireBus attribute PROPERTY to bean org.springframework.beans.factory.support.BeanDefinitionBuilder@57bd802b
+11:47:52.593 [main] DEBUG com.zaxxer.hikari.HikariConfig - dbAkadPool - configuration:
+11:47:52.593 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:47:52.593 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:47:52.593 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................null
+11:47:52.593 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............null
+11:47:52.593 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............&quot;SELECT 1&quot;
+11:47:52.593 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:47:52.593 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................null
+11:47:52.593 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............&quot;com.microsoft.sqlserver.jdbc.SQLServerDataSource&quot;
+11:47:52.593 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................null
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{user=akademik_api, url=jdbc:sqlserver://10.199.2.23:1433;databaseName=SIAKAD;, password=&lt;masked&gt;}
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName.................null
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............null
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................10000
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailFast..........true
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbc4ConnectionTest.............false
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................null
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................null
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........null
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................&lt;masked&gt;
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................&quot;dbAkadPool&quot;
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutorService........null
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................null
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............null
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................null
+11:47:52.594 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:47:52.594 [main] INFO com.zaxxer.hikari.HikariDataSource - dbAkadPool - Started.
+11:47:52.628 [main] DEBUG com.zaxxer.hikari.HikariConfig - dbIntegraPool - configuration:
+11:47:52.628 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:47:52.628 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:47:52.628 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................null
+11:47:52.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............null
+11:47:52.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............&quot;SELECT 1&quot;
+11:47:52.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:47:52.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................null
+11:47:52.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............&quot;com.microsoft.sqlserver.jdbc.SQLServerDataSource&quot;
+11:47:52.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................null
+11:47:52.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{user=readonly, url=jdbc:sqlserver://oltp.its.ac.id:1433;databaseName=ITSGATE;, password=&lt;masked&gt;}
+11:47:52.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName.................null
+11:47:52.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:47:52.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............null
+11:47:52.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................10000
+11:47:52.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailFast..........true
+11:47:52.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:47:52.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbc4ConnectionTest.............false
+11:47:52.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................null
+11:47:52.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:47:52.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:47:52.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:47:52.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................null
+11:47:52.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........null
+11:47:52.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:47:52.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................&lt;masked&gt;
+11:47:52.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................&quot;dbIntegraPool&quot;
+11:47:52.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:47:52.631 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:47:52.631 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutorService........null
+11:47:52.631 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................null
+11:47:52.632 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............null
+11:47:52.632 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................null
+11:47:52.632 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:47:52.632 [main] INFO com.zaxxer.hikari.HikariDataSource - dbIntegraPool - Started.
+11:47:52.658 [main] DEBUG com.zaxxer.hikari.HikariConfig - dbIntegraPool - configuration:
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................null
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............null
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............&quot;SELECT 1&quot;
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................null
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............&quot;com.microsoft.sqlserver.jdbc.SQLServerDataSource&quot;
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................null
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{user=readonly, url=jdbc:sqlserver://oltp.its.ac.id:1433;databaseName=ITSOIDC;, password=&lt;masked&gt;}
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName.................null
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............null
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................10000
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailFast..........true
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbc4ConnectionTest.............false
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................null
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................null
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........null
+11:47:52.659 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:47:52.660 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................&lt;masked&gt;
+11:47:52.661 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................&quot;dbIntegraPool&quot;
+11:47:52.661 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:47:52.661 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:47:52.661 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutorService........null
+11:47:52.661 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................null
+11:47:52.661 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............null
+11:47:52.661 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................null
+11:47:52.661 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:47:52.661 [main] INFO com.zaxxer.hikari.HikariDataSource - dbIntegraPool - Started.
+11:47:52.739 [main] DEBUG org.apache.cxf.configuration.spring.ConfigurerImpl - Could not determine bean name for instance of class org.apache.cxf.bus.managers.CXFBusLifeCycleManager.
+11:47:52.740 [main] DEBUG org.apache.cxf.configuration.spring.ConfigurerImpl - Could not determine bean name for instance of class org.apache.cxf.bus.managers.ServerRegistryImpl.
+11:47:52.740 [main] DEBUG org.apache.cxf.configuration.spring.ConfigurerImpl - Could not determine bean name for instance of class org.apache.cxf.binding.xml.XMLBindingFactory.
+11:47:52.741 [main] DEBUG org.apache.cxf.configuration.spring.ConfigurerImpl - Could not determine bean name for instance of class org.apache.cxf.service.factory.FactoryBeanListenerManager.
+11:47:52.741 [main] DEBUG org.apache.cxf.configuration.spring.ConfigurerImpl - Could not determine bean name for instance of class org.apache.cxf.transport.http.HTTPTransportFactory.
+11:47:52.742 [main] ERROR org.apache.cxf.transport.http.HTTPTransportFactory - Cannot find any registered HttpDestinationFactory from the Bus.
+11:47:52.742 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Close initiated...
+11:47:52.742 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Before closing stats (total=0, active=0, idle=0, waiting=0)
+11:47:52.743 [dbAkadPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Pool stats (total=0, active=0, idle=0, waiting=0)
+11:47:52.752 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - After closing stats (total=0, active=0, idle=0, waiting=0)
+11:47:52.752 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Closed.
+11:47:52.752 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Close initiated...
+11:47:52.752 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Before closing stats (total=0, active=0, idle=0, waiting=0)
+11:47:52.752 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - After closing stats (total=0, active=0, idle=0, waiting=0)
+11:47:52.752 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Closed.
+11:47:52.753 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Close initiated...
+11:47:52.753 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Before closing stats (total=0, active=0, idle=0, waiting=0)
+11:47:52.755 [dbAkadPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - After adding stats (total=0, active=0, idle=0, waiting=0)
+11:47:52.755 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - After closing stats (total=0, active=0, idle=0, waiting=0)
+11:47:52.755 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Closed.
+</system-out>
+    <system-err>Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [test-context.xml]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-endpoint-beans.xml]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-data-beans.xml]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-db-config.xml]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-redis-config.xml]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-redis-data.xml]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-redis-config.xml]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;jedisConnectionFactory&apos;: replacing [Generic bean: class [org.springframework.data.redis.connection.jedis.JedisConnectionFactory]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.connection.jedis.JedisConnectionFactory]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;sentinelConfig&apos;: replacing [Generic bean: class [org.springframework.data.redis.connection.RedisSentinelConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.connection.RedisSentinelConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;sentinels&apos;: replacing [Generic bean: class [org.springframework.beans.factory.config.SetFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Generic bean: class [org.springframework.beans.factory.config.SetFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;sentinel1&apos;: replacing [Generic bean: class [org.springframework.data.redis.connection.RedisNode]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.connection.RedisNode]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;sentinel2&apos;: replacing [Generic bean: class [org.springframework.data.redis.connection.RedisNode]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.connection.RedisNode]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;stringRedisSerializer&apos;: replacing [Generic bean: class [org.springframework.data.redis.serializer.StringRedisSerializer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.serializer.StringRedisSerializer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;jsonRedisSerializer&apos;: replacing [Generic bean: class [org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;redisTemplate&apos;: replacing [Generic bean: class [org.springframework.data.redis.core.RedisTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.core.RedisTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [integra-filter-beans.xml]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [integra-service-beans.xml]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [integra-data-beans.xml]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [integra-db-config.xml]
+Jul 02, 2019 11:47:52 AM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.GenericApplicationContext@12477988: startup date [Tue Jul 02 11:47:52 ICT 2019]; root of context hierarchy
+Jul 02, 2019 11:47:52 AM org.springframework.test.context.TestContextManager prepareTestInstance
+SEVERE: Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@70807224] to prepare test instance [id.its.akademik.rest.test.ProdiRestEndpointTest@5dc3fcb7]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;testCxfServer&apos;: Invocation of init method failed; nested exception is org.apache.cxf.service.factory.ServiceConstructionException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 31 more
+Caused by: org.apache.cxf.service.factory.ServiceConstructionException
+	at org.apache.cxf.jaxrs.JAXRSServerFactoryBean.create(JAXRSServerFactoryBean.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1681)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 46 more
+Caused by: java.io.IOException: Cannot find any registered HttpDestinationFactory from the Bus.
+	at org.apache.cxf.transport.http.HTTPTransportFactory.getDestination(HTTPTransportFactory.java:296)
+	at org.apache.cxf.endpoint.ServerImpl.initDestination(ServerImpl.java:83)
+	at org.apache.cxf.endpoint.ServerImpl.&lt;init&gt;(ServerImpl.java:62)
+	at org.apache.cxf.jaxrs.JAXRSServerFactoryBean.create(JAXRSServerFactoryBean.java:165)
+	... 53 more
+
+</system-err>
+  </testcase>
+  <testcase classname="id.its.akademik.rest.test.ProdiRestEndpointTest" name="canGetProdi" time="0.729">
+    <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;testCxfServer&apos;: Invocation of init method failed; nested exception is org.apache.cxf.service.factory.ServiceConstructionException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 31 more
+Caused by: org.apache.cxf.service.factory.ServiceConstructionException
+	at org.apache.cxf.jaxrs.JAXRSServerFactoryBean.create(JAXRSServerFactoryBean.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1681)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 46 more
+Caused by: java.io.IOException: Cannot find any registered HttpDestinationFactory from the Bus.
+	at org.apache.cxf.transport.http.HTTPTransportFactory.getDestination(HTTPTransportFactory.java:296)
+	at org.apache.cxf.endpoint.ServerImpl.initDestination(ServerImpl.java:83)
+	at org.apache.cxf.endpoint.ServerImpl.&lt;init&gt;(ServerImpl.java:62)
+	at org.apache.cxf.jaxrs.JAXRSServerFactoryBean.create(JAXRSServerFactoryBean.java:165)
+	... 53 more
+</error>
+    <system-out>11:47:53.172 [main] DEBUG org.apache.cxf.configuration.spring.AbstractBeanDefinitionParser - Adding org.apache.cxf.configuration.spring.AbstractBeanDefinitionParser.wireBus attribute PROPERTY to bean org.springframework.beans.factory.support.BeanDefinitionBuilder@55b8dbda
+11:47:53.204 [main] DEBUG com.zaxxer.hikari.HikariConfig - dbAkadPool - configuration:
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................null
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............null
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............&quot;SELECT 1&quot;
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................null
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............&quot;com.microsoft.sqlserver.jdbc.SQLServerDataSource&quot;
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................null
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{user=akademik_api, url=jdbc:sqlserver://10.199.2.23:1433;databaseName=SIAKAD;, password=&lt;masked&gt;}
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName.................null
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............null
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................10000
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailFast..........true
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbc4ConnectionTest.............false
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................null
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:47:53.205 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................null
+11:47:53.206 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........null
+11:47:53.206 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:47:53.206 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................&lt;masked&gt;
+11:47:53.206 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................&quot;dbAkadPool&quot;
+11:47:53.206 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:47:53.207 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:47:53.207 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutorService........null
+11:47:53.207 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................null
+11:47:53.207 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............null
+11:47:53.207 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................null
+11:47:53.207 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:47:53.207 [main] INFO com.zaxxer.hikari.HikariDataSource - dbAkadPool - Started.
+11:47:53.258 [main] DEBUG com.zaxxer.hikari.HikariConfig - dbIntegraPool - configuration:
+11:47:53.258 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:47:53.258 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:47:53.258 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................null
+11:47:53.258 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............null
+11:47:53.258 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............&quot;SELECT 1&quot;
+11:47:53.258 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:47:53.258 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................null
+11:47:53.262 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............&quot;com.microsoft.sqlserver.jdbc.SQLServerDataSource&quot;
+11:47:53.262 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................null
+11:47:53.262 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{user=readonly, url=jdbc:sqlserver://oltp.its.ac.id:1433;databaseName=ITSGATE;, password=&lt;masked&gt;}
+11:47:53.262 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName.................null
+11:47:53.262 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:47:53.262 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............null
+11:47:53.262 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................10000
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailFast..........true
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbc4ConnectionTest.............false
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................null
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................null
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........null
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................&lt;masked&gt;
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................&quot;dbIntegraPool&quot;
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutorService........null
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................null
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............null
+11:47:53.263 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................null
+11:47:53.264 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:47:53.264 [main] INFO com.zaxxer.hikari.HikariDataSource - dbIntegraPool - Started.
+11:47:53.291 [main] DEBUG com.zaxxer.hikari.HikariConfig - dbIntegraPool - configuration:
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................null
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............null
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............&quot;SELECT 1&quot;
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................null
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............&quot;com.microsoft.sqlserver.jdbc.SQLServerDataSource&quot;
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................null
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{user=readonly, url=jdbc:sqlserver://oltp.its.ac.id:1433;databaseName=ITSOIDC;, password=&lt;masked&gt;}
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName.................null
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............null
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................10000
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailFast..........true
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbc4ConnectionTest.............false
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................null
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................null
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........null
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................&lt;masked&gt;
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................&quot;dbIntegraPool&quot;
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutorService........null
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................null
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............null
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................null
+11:47:53.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:47:53.292 [main] INFO com.zaxxer.hikari.HikariDataSource - dbIntegraPool - Started.
+11:47:53.357 [main] DEBUG org.apache.cxf.configuration.spring.ConfigurerImpl - Could not determine bean name for instance of class org.apache.cxf.bus.managers.CXFBusLifeCycleManager.
+11:47:53.357 [main] DEBUG org.apache.cxf.configuration.spring.ConfigurerImpl - Could not determine bean name for instance of class org.apache.cxf.bus.managers.ServerRegistryImpl.
+11:47:53.359 [main] DEBUG org.apache.cxf.configuration.spring.ConfigurerImpl - Could not determine bean name for instance of class org.apache.cxf.binding.xml.XMLBindingFactory.
+11:47:53.359 [main] DEBUG org.apache.cxf.configuration.spring.ConfigurerImpl - Could not determine bean name for instance of class org.apache.cxf.service.factory.FactoryBeanListenerManager.
+11:47:53.361 [main] DEBUG org.apache.cxf.configuration.spring.ConfigurerImpl - Could not determine bean name for instance of class org.apache.cxf.transport.http.HTTPTransportFactory.
+11:47:53.362 [main] ERROR org.apache.cxf.transport.http.HTTPTransportFactory - Cannot find any registered HttpDestinationFactory from the Bus.
+11:47:53.362 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Close initiated...
+11:47:53.362 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Before closing stats (total=0, active=0, idle=0, waiting=0)
+11:47:53.438 [dbAkadPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Pool stats (total=0, active=0, idle=0, waiting=0)
+11:47:53.439 [dbIntegraPool housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Pool stats (total=0, active=0, idle=0, waiting=0)
+11:47:53.440 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - After closing stats (total=0, active=0, idle=0, waiting=0)
+11:47:53.441 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Closed.
+11:47:53.441 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Close initiated...
+11:47:53.441 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Before closing stats (total=0, active=0, idle=0, waiting=0)
+11:47:53.441 [dbIntegraPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - After adding stats (total=0, active=0, idle=0, waiting=0)
+11:47:53.442 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - After closing stats (total=0, active=0, idle=0, waiting=0)
+11:47:53.442 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbIntegraPool - Closed.
+11:47:53.445 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Close initiated...
+11:47:53.445 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Before closing stats (total=0, active=0, idle=0, waiting=0)
+11:47:53.461 [dbAkadPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Added connection ConnectionID:62 ClientConnectionId: 1d77d4e8-d67e-4266-aefa-888bbd3a716a
+11:47:53.461 [dbAkadPool connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - After adding stats (total=1, active=0, idle=1, waiting=0)
+11:47:53.462 [dbAkadPool connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - dbAkadPool - Closing connection ConnectionID:62 ClientConnectionId: 1d77d4e8-d67e-4266-aefa-888bbd3a716a: (connection evicted)
+11:47:53.462 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - dbAkadPool - After closing stats (total=0, active=0, idle=0, waiting=0)
+11:47:53.462 [main] INFO com.zaxxer.hikari.pool.HikariPool - dbAkadPool - Closed.
+</system-out>
+    <system-err>Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [test-context.xml]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-endpoint-beans.xml]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-data-beans.xml]
+Jul 02, 2019 11:47:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-db-config.xml]
+Jul 02, 2019 11:47:53 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-redis-config.xml]
+Jul 02, 2019 11:47:53 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-redis-data.xml]
+Jul 02, 2019 11:47:53 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [akademik-redis-config.xml]
+Jul 02, 2019 11:47:53 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;jedisConnectionFactory&apos;: replacing [Generic bean: class [org.springframework.data.redis.connection.jedis.JedisConnectionFactory]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.connection.jedis.JedisConnectionFactory]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:53 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;sentinelConfig&apos;: replacing [Generic bean: class [org.springframework.data.redis.connection.RedisSentinelConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.connection.RedisSentinelConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:53 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;sentinels&apos;: replacing [Generic bean: class [org.springframework.beans.factory.config.SetFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Generic bean: class [org.springframework.beans.factory.config.SetFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+Jul 02, 2019 11:47:53 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;sentinel1&apos;: replacing [Generic bean: class [org.springframework.data.redis.connection.RedisNode]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.connection.RedisNode]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:53 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;sentinel2&apos;: replacing [Generic bean: class [org.springframework.data.redis.connection.RedisNode]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.connection.RedisNode]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:53 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;stringRedisSerializer&apos;: replacing [Generic bean: class [org.springframework.data.redis.serializer.StringRedisSerializer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.serializer.StringRedisSerializer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:53 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;jsonRedisSerializer&apos;: replacing [Generic bean: class [org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:53 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerBeanDefinition
+INFO: Overriding bean definition for bean &apos;redisTemplate&apos;: replacing [Generic bean: class [org.springframework.data.redis.core.RedisTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]] with [Generic bean: class [org.springframework.data.redis.core.RedisTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [akademik-redis-config.xml]]
+Jul 02, 2019 11:47:53 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [integra-filter-beans.xml]
+Jul 02, 2019 11:47:53 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [integra-service-beans.xml]
+Jul 02, 2019 11:47:53 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [integra-data-beans.xml]
+Jul 02, 2019 11:47:53 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [integra-db-config.xml]
+Jul 02, 2019 11:47:53 AM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.GenericApplicationContext@7a799159: startup date [Tue Jul 02 11:47:53 ICT 2019]; root of context hierarchy
+Jul 02, 2019 11:47:53 AM org.springframework.test.context.TestContextManager prepareTestInstance
+SEVERE: Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@70807224] to prepare test instance [id.its.akademik.rest.test.ProdiRestEndpointTest@59429fac]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;testCxfServer&apos;: Invocation of init method failed; nested exception is org.apache.cxf.service.factory.ServiceConstructionException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 31 more
+Caused by: org.apache.cxf.service.factory.ServiceConstructionException
+	at org.apache.cxf.jaxrs.JAXRSServerFactoryBean.create(JAXRSServerFactoryBean.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1681)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 46 more
+Caused by: java.io.IOException: Cannot find any registered HttpDestinationFactory from the Bus.
+	at org.apache.cxf.transport.http.HTTPTransportFactory.getDestination(HTTPTransportFactory.java:296)
+	at org.apache.cxf.endpoint.ServerImpl.initDestination(ServerImpl.java:83)
+	at org.apache.cxf.endpoint.ServerImpl.&lt;init&gt;(ServerImpl.java:62)
+	at org.apache.cxf.jaxrs.JAXRSServerFactoryBean.create(JAXRSServerFactoryBean.java:165)
+	... 53 more
+
+</system-err>
+  </testcase>
 </testsuite>

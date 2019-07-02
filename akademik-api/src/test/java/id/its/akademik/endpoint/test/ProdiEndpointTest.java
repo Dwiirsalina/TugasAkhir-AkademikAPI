@@ -24,7 +24,7 @@ public class ProdiEndpointTest {
 //		Response response = fakultasEndpoint.getListDosen("Rizky");
 //		Response response = prodiEndpoint.getMataKuliah("51100", 2017, 2);
 //		Response response = prodiEndpoint.getMataKuliah("21030", 2018, 2);
-		Response response = prodiEndpoint.getKelasDitawarkan("51100", 2017, 2, 1, 100, "listKelas", "nama", "Indonesia", true);
+//		Response response = prodiEndpoint.getKelasDitawarkan("51100", 2017, 2, 1, 100, "listKelas", "nama", "Indonesia", true);
 //		Response response = prodiEndpoint.getMatakuliahKurikulum("51100", 2018, "Indonesia");
 //		--Pesertakelas:----
 //		Response response = prodiEndpoint.getPesertaKelas("51100", "KI1301", "C", 2011, 1);
@@ -32,7 +32,7 @@ public class ProdiEndpointTest {
 //		Response response = prodiEndpoint.getListProdi("q", 0, 100, "fields");
 //		Response response = prodiEndpoint.getMataKuliah("51100", 2017, 2);
 //		GetProdiAjar 		
-//		Response response = prodiEndpoint.getProdiAjar();
+		Response response = prodiEndpoint.getProdiAjar();
 //		Get Kurikulum 
 //		Response response = prodiEndpoint.getMatakuliahKurikulum("51100", 2018, "Indonesia");
 //		get tahun kurikulum 
