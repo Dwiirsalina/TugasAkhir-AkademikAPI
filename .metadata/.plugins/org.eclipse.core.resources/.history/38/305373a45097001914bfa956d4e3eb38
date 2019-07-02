@@ -1,6 +1,0 @@
-package id.its.akademik.config;
-
-@Configuration
-public class RedisConfig {
-
-}

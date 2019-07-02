@@ -1,5 +1,0 @@
-package id.its.akademik.dao.redis;
-
-public class RedisKelembagaanDao {
-
-}

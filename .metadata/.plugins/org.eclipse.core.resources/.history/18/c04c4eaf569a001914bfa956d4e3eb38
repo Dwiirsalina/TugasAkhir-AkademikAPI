@@ -1,5 +1,0 @@
-package id.its.akademik.dao.cache;
-
-public abstract class AbstractCache {
-	
-}

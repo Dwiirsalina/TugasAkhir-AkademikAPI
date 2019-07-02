@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="MahasiswaEndpointTest" project="akademik-api" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="id.its.akademik.endpoint.test.MahasiswaEndpointTest" time="2.023">
-    <testcase name="canGetMahasiswa" classname="id.its.akademik.endpoint.test.MahasiswaEndpointTest" time="2.023"/>
-  </testsuite>
-</testrun>

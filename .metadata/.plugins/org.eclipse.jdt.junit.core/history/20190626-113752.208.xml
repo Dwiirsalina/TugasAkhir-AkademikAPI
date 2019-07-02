@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="KurikulumDaoTest" project="akademik-api" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="id.its.akademik.dao.test.KurikulumDaoTest" time="12.407">
-    <testcase name="canRetrieveMahasiswa" classname="id.its.akademik.dao.test.KurikulumDaoTest" time="12.407"/>
-  </testsuite>
-</testrun>

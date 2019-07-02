@@ -1,5 +1,0 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<import resource="classpath:akademik-redis-config.xml"/>
-	<bean id="kelembagaanRedis" class="id.its.akademik.dao.redis.RedisKelembagaanDao">
-		<property name="redisTemplate" ref="redisTemplate"/>
-	</bean>
