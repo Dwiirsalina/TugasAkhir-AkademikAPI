@@ -9,6 +9,7 @@ import org.springframework.data.redis.core.HashOperations;
 
 import id.its.akademik.dao.cache.AbstractCache;
 import id.its.akademik.dao.cache.PegawaiCache;
+import id.its.akademik.domain.JadwalKuliah;
 import id.its.akademik.domain.Mahasiswa;
 import id.its.akademik.domain.Pegawai;
 import id.its.akademik.domain.ProdiAjar;
@@ -67,6 +68,31 @@ public class RedisPegawaiDao extends AbstractCache implements PegawaiCache {
 		pegawai.setAlamat(pegawaiRedis.get("alamat"));
 		
 		return pegawai;
+	}
+
+	@Override
+	public void setJadwalDosen(String key, List<JadwalKuliah> list) {
+		List<Object> objects=new ArrayList();
+		for(JadwalKuliah jadwalDosen:list)
+		{
+			Object object=(Object) jadwalDosen;
+			objects.add(object);
+		}
+		this.setListOperation(key, objects);
+		
+	}
+
+	@Override
+	public List<JadwalKuliah> getJadwalDosen(String key) {
+		List<Object> objects=this.getListOperations(key);
+		List<JadwalKuliah> dosenJadwal=new ArrayList();
+		
+		for(Object object:objects)
+		{
+			JadwalKuliah jadwalDosen=(JadwalKuliah) object;
+			dosenJadwal.add(jadwalDosen);
+		}
+		return dosenJadwal;
 	}
 
 	

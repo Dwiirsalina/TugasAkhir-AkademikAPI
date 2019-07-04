@@ -121,22 +121,26 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 
 		String nrp = securityContext.getUserPrincipal().getName();
 		String nrpLama = this.mahasiswaDao.getNrpLama(nrp);
-		List<Mahasiswa> mhs = this.mahasiswaDao.getMahasiswa(nrpLama);
-		if (!mhs.isEmpty())
-			mhs.get(0).setSemesterKe(this.mahasiswaDao.getSemesterKe(nrpLama));
-
+		
+		List<Mahasiswa> mhs=null;
+		if(this.mahasiswaCache.checkKey("ProdiAjar")==true)
+		{
+			mhs=this.mahasiswaCache.getMahasiswaData("Mahasiswa");
+		}
+		else
+		{
+			mhs = this.mahasiswaDao.getMahasiswa(nrpLama);
+//			if (!mhs.isEmpty())
+//				mhs.get(0).setSemesterKe(this.mahasiswaDao.getSemesterKe(nrpLama));
+			if(mhs!=null&&!mhs.isEmpty())
+			{
+				mhs.get(0).setSemesterKe(this.mahasiswaDao.getSemesterKe(nrpLama));
+				this.mahasiswaCache.setMahasiswaData("Mahasiswa", mhs);
+			}
+		}
 		return Response.ok(toJson(mhs)).build();
 	}
 	
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	@Path("/")
-	public Response getMahasiswaTest(String nrp) {
-
-		List<Mahasiswa> listProdi = this.mahasiswaDao.getMahasiswa(nrp);
-
-		return Response.ok(toJson(listProdi)).build();
-	}
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -390,6 +394,14 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 		else 
 		{
 			 transkrip = this.mahasiswaDao.getTranskrip(nrpLama);
+			 if (transkrip == null) {
+					return Response.status(Status.NOT_FOUND).build();
+				}
+				transkrip.setNrp(nrpLama);
+				akademikService.setTranskrip(nrpLama, bahasa, transkrip);
+
+				transkrip.setSksLulus(this.mahasiswaDao.getSksLulus(nrpLama));
+				transkrip.setSksTempuh(this.mahasiswaDao.getSksTempuh(nrpLama));
 			 if (transkrip!=null)
 			 {
 				 this.mahasiswaCache.setTranskripMhs("Transkrip_"+nrp, transkrip);
@@ -398,14 +410,14 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 
 		
 //		Transkrip transkrip = this.mahasiswaDao.getTranskrip(nrpLama);
-		if (transkrip == null) {
-			return Response.status(Status.NOT_FOUND).build();
-		}
-		transkrip.setNrp(nrpLama);
-		akademikService.setTranskrip(nrpLama, bahasa, transkrip);
-
-		transkrip.setSksLulus(this.mahasiswaDao.getSksLulus(nrpLama));
-		transkrip.setSksTempuh(this.mahasiswaDao.getSksTempuh(nrpLama));
+//		if (transkrip == null) {
+//			return Response.status(Status.NOT_FOUND).build();
+//		}
+//		transkrip.setNrp(nrpLama);
+//		akademikService.setTranskrip(nrpLama, bahasa, transkrip);
+//
+//		transkrip.setSksLulus(this.mahasiswaDao.getSksLulus(nrpLama));
+//		transkrip.setSksTempuh(this.mahasiswaDao.getSksTempuh(nrpLama));
 
 		return Response.ok(toJson(transkrip)).build();
 	}
@@ -428,19 +440,17 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 		else 
 		{
 			transkrip = this.mahasiswaDao.getTranskrip(nrpLama);
-			 
-				 this.mahasiswaCache.setTranskripMhs("Transkrip_"+nrp, transkrip);
-		}
-		
-		 
-		if (transkrip == null) {
-			return Response.status(Status.NOT_FOUND).build();
-		}
-		transkrip.setNrp(nrpLama);
-		akademikService.setTranskrip(nrpLama, bahasa, transkrip);
+			if (transkrip == null) {
+				return Response.status(Status.NOT_FOUND).build();
+			}
+			transkrip.setNrp(nrpLama);
+			akademikService.setTranskrip(nrpLama, bahasa, transkrip);
 
-		transkrip.setSksLulus(this.mahasiswaDao.getSksLulus(nrpLama));
-		transkrip.setSksTempuh(this.mahasiswaDao.getSksTempuh(nrpLama));
+			transkrip.setSksLulus(this.mahasiswaDao.getSksLulus(nrpLama));
+			transkrip.setSksTempuh(this.mahasiswaDao.getSksTempuh(nrpLama));
+			 
+			this.mahasiswaCache.setTranskripMhs("Transkrip_"+nrp, transkrip);
+		}
 		return Response.ok(toJson(transkrip)).build();
 	}
 
@@ -491,28 +501,31 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 		String nrpLama = this.mahasiswaDao.getNrpLama(nrp);
 		
 		List<FRS> list=null;
-		if(this.akademikCache.checkKey("ListFRS_"+nrp)==true)
+		if(this.akademikCache.checkKey("FRS_"+nrp)==true)
 		{
-			list=this.akademikCache.getListFrs("ListFRS_"+nrp);
+			list=this.akademikCache.getListFrs("FRS_"+nrp);
 		}
 		else
 		{
 			list = this.akademikDao.getListFRS(nrpLama);
+			
+			for (FRS frs : list) {
+				Integer sks = this.akademikDao.getSKSAmbil(nrpLama, frs.getTahun(), frs.getSemester());
+				Boolean disetujui = this.akademikDao.getFRSDisetujui(nrpLama, frs.getTahun(), frs.getSemester());
+				frs.setDisetujui(disetujui);
+				frs.setSksAmbil(sks);
+			}
+			
 			if(list!=null&&!list.isEmpty())
 			{
-				this.akademikCache.setListFrs("ListFRS_"+nrp, list);
+				this.akademikCache.setListFrs("FRS_"+nrp, list);
 			}
 		}
 
 		if (list == null) {
 			return Response.status(Status.NOT_FOUND).build();
 		}
-		for (FRS frs : list) {
-			Integer sks = this.akademikDao.getSKSAmbil(nrpLama, frs.getTahun(), frs.getSemester());
-			Boolean disetujui = this.akademikDao.getFRSDisetujui(nrpLama, frs.getTahun(), frs.getSemester());
-			frs.setDisetujui(disetujui);
-			frs.setSksAmbil(sks);
-		}
+		
 
 		return Response.ok(toJson(list)).build();
 	}
@@ -525,16 +538,30 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 		String nrp = securityContext.getUserPrincipal().getName();
 		String nrpLama = this.mahasiswaDao.getNrpLama(nrp);
 
-		List<FRS> list = this.akademikDao.getListFRS(nrpLama);
-
+		List<FRS> list=null;
+		if(this.akademikCache.checkKey("FRS_"+nrp)==true)
+		{
+			list=this.akademikCache.getListFrs("FRS_"+nrp);
+		}
+		else
+		{
+			list = this.akademikDao.getListFRS(nrpLama);
+			
+			for (FRS frs : list) {
+				Integer sks = this.akademikDao.getSKSAmbil(nrpLama, frs.getTahun(), frs.getSemester());
+				Boolean disetujui = this.akademikDao.getFRSDisetujui(nrpLama, frs.getTahun(), frs.getSemester());
+				frs.setDisetujui(disetujui);
+				frs.setSksAmbil(sks);
+			}
+			
+			if(list!=null&&!list.isEmpty())
+			{
+				this.akademikCache.setListFrs("FRS_"+nrp, list);
+			}
+		}
+		
 		if (list == null) {
 			return Response.status(Status.NOT_FOUND).build();
-		}
-		for (FRS frs : list) {
-			Integer sks = this.akademikDao.getSKSAmbil(nrpLama, frs.getTahun(), frs.getSemester());
-			Boolean disetujui = this.akademikDao.getFRSDisetujui(nrpLama, frs.getTahun(), frs.getSemester());
-			frs.setDisetujui(disetujui);
-			frs.setSksAmbil(sks);
 		}
 
 		return Response.ok(toJson(list)).build();
@@ -551,15 +578,25 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 			return Response.status(400).build();
 		}
 		String nrp = this.mahasiswaDao.getNrpLama(id);
-
-		FRS frs = this.akademikDao.getFRS(nrp, tahun, semester);
-
-		if (frs == null) {
-			return Response.status(Status.NOT_FOUND).build();
-		} else {
-			akademikService.setFRS(nrp, tahun, semester, bahasa, frs);
+		
+		FRS frs;
+		if(this.akademikCache.checkKey("Frs_"+nrp+"_"+tahun+"_"+semester)==true)
+		{
+			 frs=this.akademikCache.getDataFrs("Frs_"+nrp+"_"+tahun+"_"+semester);
 		}
+		else
+		{
+			frs = this.akademikDao.getFRS(nrp, tahun, semester);
 
+			if (frs == null) {
+				return Response.status(Status.NOT_FOUND).build();
+			} else {
+				akademikService.setFRS(nrp, tahun, semester, bahasa, frs);
+				this.akademikCache.setDataFrs("Frs_"+nrp+"_"+tahun+"_"+semester, frs);
+			}
+				
+				
+		}
 		return Response.ok(toJson(frs)).build();
 	}
 
@@ -577,12 +614,23 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 		String id = securityContext.getUserPrincipal().getName();
 		String nrp = this.mahasiswaDao.getNrpLama(id);
 
-		FRS frs = this.akademikDao.getFRS(nrp, tahun, semester);
+		FRS frs;
+		if(this.akademikCache.checkKey("Frs_"+nrp+"_"+tahun+"_"+semester)==true)
+		{
+			 frs=this.akademikCache.getDataFrs("Frs_"+nrp+"_"+tahun+"_"+semester);
+		}
+		else
+		{
+			frs = this.akademikDao.getFRS(nrp, tahun, semester);
 
-		if (frs == null) {
-			return Response.status(Status.NOT_FOUND).build();
-		} else {
-			akademikService.setFRS(nrp, tahun, semester, bahasa, frs);
+			if (frs == null) {
+				return Response.status(Status.NOT_FOUND).build();
+			} else {
+				akademikService.setFRS(nrp, tahun, semester, bahasa, frs);
+				this.akademikCache.setDataFrs("Frs_"+nrp+"_"+tahun+"_"+semester, frs);
+			}
+				
+				
 		}
 
 		return Response.ok(toJson(frs)).build();
@@ -791,25 +839,23 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 		
 		
 		List<KemajuanStudi> listKemajuan=null;
-		if(this.mahasiswaCache.checkKey("KemajuanMahasiswa_"+nrp)==true)
+		if(this.mahasiswaCache.checkKey("KemajuanStudi_"+nrp)==true)
 		{
-			listKemajuan=this.mahasiswaCache.getKemajuanMhs("KemajuanMahasiswa_"+nrp);
+			listKemajuan=this.mahasiswaCache.getKemajuanMhs("KemajuanStudi_"+nrp);
 		}
 		else
 		{
 			listKemajuan = this.mahasiswaDao.getKemajuanStudi(nrpLama);
+			for (KemajuanStudi k : listKemajuan) {
+				List<DaftarNilai> listTranskrip = this.mahasiswaDao.getTranskripMahasiswa(k.getTahun(), k.getIdSemester(),
+						k.getSemesterAmbil(), k.getId(), bahasa);
+				k.setTranskrip(listTranskrip);
+			}
 			if(listKemajuan!=null&&!listKemajuan.isEmpty())
 			{
-				this.mahasiswaCache.setKemajuanMhs("KemajuanMahasiswa_"+nrp,listKemajuan);
+				this.mahasiswaCache.setKemajuanMhs("KemajuanStudi_"+nrp,listKemajuan);
 			}
 		}
-
-		for (KemajuanStudi k : listKemajuan) {
-			List<DaftarNilai> listTranskrip = this.mahasiswaDao.getTranskripMahasiswa(k.getTahun(), k.getIdSemester(),
-					k.getSemesterAmbil(), k.getId(), bahasa);
-			k.setTranskrip(listTranskrip);
-		}
-
 		return Response.ok(toJson(listKemajuan)).build();
 	}
 
@@ -832,16 +878,15 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 		else
 		{
 			listKemajuan = this.mahasiswaDao.getKemajuanStudi(nrpLama);
+			for (KemajuanStudi k : listKemajuan) {
+				List<DaftarNilai> listTranskrip = this.mahasiswaDao.getTranskripMahasiswa(k.getTahun(), k.getIdSemester(),
+						k.getSemesterAmbil(), k.getId(), bahasa);
+				k.setTranskrip(listTranskrip);
+			}
 			if(listKemajuan!=null&&!listKemajuan.isEmpty())
 			{
 				this.mahasiswaCache.setKemajuanMhs("KemajuanMahasiswa_"+nrp,listKemajuan);
 			}
-		}
-		
-		for (KemajuanStudi k : listKemajuan) {
-			List<DaftarNilai> listTranskrip = this.mahasiswaDao.getTranskripMahasiswa(k.getTahun(), k.getIdSemester(),
-					k.getSemesterAmbil(), k.getId(), bahasa);
-			k.setTranskrip(listTranskrip);
 		}
 
 		return Response.ok(toJson(listKemajuan)).build();
@@ -972,9 +1017,9 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 		String nrpLama = this.mahasiswaDao.getNrpLama(nrp);
 		
 		List<JadwalKuliah> jadwal=null;
-		if(this.mahasiswaCache.checkKey("JadwalKuliahSelanjutnya_"+nrp+"_"+tahun+"_"+semester+"_"+idHari)==true)
+		if(this.mahasiswaCache.checkKey("JadwalKuliah_"+nrp+"_"+tahun+"_"+semester+"_"+idHari)==true)
 		{
-			jadwal=this.mahasiswaCache.getJadwalSelanjutnya("JadwalKuliahSelanjutnya_"+nrp+"_"+tahun+"_"+semester+"_"+idHari);
+			jadwal=this.mahasiswaCache.getJadwalSelanjutnya("JadwalKuliah_"+nrp+"_"+tahun+"_"+semester+"_"+idHari);
 		}
 		else
 		{
@@ -982,7 +1027,7 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 					kodeProdi, bahasa);
 			if(jadwal!=null&&!jadwal.isEmpty())
 			{
-				this.mahasiswaCache.setJadwalSelanjutnya("JadwalKuliahSelanjutnya_"+nrp+"_"+tahun+"_"+semester+"_"+idHari,jadwal);
+				this.mahasiswaCache.setJadwalSelanjutnya("JadwalKuliah_"+nrp+"_"+tahun+"_"+semester+"_"+idHari,jadwal);
 			}
 		}
 		
@@ -1004,9 +1049,9 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 		String nrpLama = this.mahasiswaDao.getNrpLama(nrp);
 
 		List<JadwalKuliah> jadwal=null;
-		if(this.mahasiswaCache.checkKey("JadwalKuliahSelanjutnya_"+nrp+"_"+tahun+"_"+semester+"_"+idHari)==true)
+		if(this.mahasiswaCache.checkKey("JadwalKuliah_"+nrp+"_"+tahun+"_"+semester+"_"+idHari)==true)
 		{
-			jadwal=this.mahasiswaCache.getJadwalSelanjutnya("JadwalKuliahSelanjutnya_"+nrp+"_"+tahun+"_"+semester+"_"+idHari);
+			jadwal=this.mahasiswaCache.getJadwalSelanjutnya("JadwalKuliah_"+nrp+"_"+tahun+"_"+semester+"_"+idHari);
 		}
 		else
 		{
@@ -1014,7 +1059,7 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 					kodeProdi, bahasa);
 			if(jadwal!=null&&!jadwal.isEmpty())
 			{
-				this.mahasiswaCache.setJadwalSelanjutnya("JadwalKuliahSelanjutnya_"+nrp+"_"+tahun+"_"+semester+"_"+idHari,jadwal);
+				this.mahasiswaCache.setJadwalSelanjutnya("JadwalKuliah_"+nrp+"_"+tahun+"_"+semester+"_"+idHari,jadwal);
 			}
 		}
 		if (jadwal.isEmpty())

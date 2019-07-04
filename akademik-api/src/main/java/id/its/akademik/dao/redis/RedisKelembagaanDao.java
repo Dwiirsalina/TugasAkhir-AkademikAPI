@@ -8,28 +8,13 @@ import org.springframework.data.redis.core.ListOperations;
 import id.its.akademik.dao.cache.AbstractCache;
 import id.its.akademik.dao.cache.KelembagaanCache;
 import id.its.akademik.domain.ProdiAjar;
+import id.its.akademik.domain.ProgramStudi;
 
 public class RedisKelembagaanDao extends AbstractCache implements KelembagaanCache{
 	@Override
 	public Boolean checkKey(String key) {
 		return this.checkKeyinRedis(key);
 	}
-	
-//	@Override
-//	public void setListOperations(String key,List<ProdiAjar> prodiAjar) {
-//		ListOperations<String, ProdiAjar> operations =this.getRedisTemplate().opsForList();
-//		for(ProdiAjar object:prodiAjar)
-//		{
-//			operations.rightPush(key, object);
-//		}
-//	}
-	
-//	@Override
-//	public List<ProdiAjar> getListOperations(String key)
-//	{
-//		ListOperations<String, ProdiAjar> operations = this.getRedisTemplate().opsForList();
-//		return operations.range(key, 0, -1);
-//	}
 
 	@Override
 	public void setProdiAjar(String key,List<ProdiAjar> list) {
@@ -54,6 +39,31 @@ public class RedisKelembagaanDao extends AbstractCache implements KelembagaanCac
 			listProdi.add(prodi);
 		}
 		return listProdi;
+	}
+
+	@Override
+	public void setProdi(String key, List<ProgramStudi> list) {
+		List<Object> objects=new ArrayList();
+		for(ProgramStudi prodiProdi:list)
+		{
+			Object object=(ProgramStudi) prodiProdi;
+			objects.add(object);
+		}
+		this.setListOperation(key, objects);
+		
+	}
+
+	@Override
+	public List<ProgramStudi> getProdi(String key) {
+		List<Object> objects=this.getListOperations(key);
+		List<ProgramStudi> listProdiProdi=new ArrayList();
+		
+		for(Object object:objects)
+		{
+			ProgramStudi prodiProdi=(ProgramStudi) object;
+			listProdiProdi.add(prodiProdi);
+		}
+		return listProdiProdi;
 	}
 
 }

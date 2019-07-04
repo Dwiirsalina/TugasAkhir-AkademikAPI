@@ -29,6 +29,7 @@ import id.its.akademik.domain.Mahasiswa;
 import id.its.akademik.domain.Pegawai;
 import id.its.akademik.domain.PeringkatIPD;
 import id.its.akademik.domain.PeriodeMahasiswa;
+import id.its.akademik.domain.ProdiAjar;
 import id.its.akademik.domain.WaktuPermanenNilai;
 import id.its.integra.security.Secured;
 
@@ -86,18 +87,12 @@ public class DosenEndpoint extends BaseEndpoint {
 		else 
 		{
 			 p = this.pegawaiDao.getPegawai(nip);
+			 if (p == null) {
+				 p = this.pegawaiDao.getPegawaiByNIPBaru(nip);
+			}
 			 
 				 this.pegawaiCache.setDataPegawai("Pegawai_"+nip, p);
 		}
-		
-		if (p == null) {
-				p = this.pegawaiDao.getPegawaiByNIPBaru(nip);
-		}
-//
-//		Pegawai p = this.pegawaiDao.getPegawai(nip);
-//		if (p == null) {
-//			p = this.pegawaiDao.getPegawaiByNIPBaru(nip);
-//		}
 
 		return Response.ok(toJson(p)).build();
 	}
@@ -115,14 +110,15 @@ public class DosenEndpoint extends BaseEndpoint {
 		else 
 		{
 			 p = this.pegawaiDao.getPegawai(nip);
+			 if (p == null) {
+					p = this.pegawaiDao.getPegawaiByNIPBaru(nip);
+			}
+
 			 
 				 this.pegawaiCache.setDataPegawai("Pegawai_"+nip, p);
 		}
 		
-		if (p == null) {
-				p = this.pegawaiDao.getPegawaiByNIPBaru(nip);
-		}
-
+		
 		return Response.ok(p).build();
 	}
 
@@ -272,7 +268,21 @@ public class DosenEndpoint extends BaseEndpoint {
 		if (nip == null || nip.isEmpty() || tahun == null || semester == null || kodeProdi == null) {
 			return Response.status(400).build();
 		}
-		List<JadwalKuliah> jadwal = this.pegawaiDao.getJadwalAjar(nip, tahun, semester, kodeProdi, bahasa);
+		
+		List<JadwalKuliah> jadwal=null;
+		if(this.pegawaiCache.checkKey("DosenJadwal")==true)
+		{
+			jadwal=this.pegawaiCache.getJadwalDosen("DosenJadwal");
+		}
+		else
+		{
+			jadwal = this.pegawaiDao.getJadwalAjar(nip, tahun, semester, kodeProdi, bahasa);
+			if(jadwal!=null&&!jadwal.isEmpty())
+			{
+				this.pegawaiCache.setJadwalDosen("DosenJadwal", jadwal);
+			}
+		}
+		 
 		return Response.ok(toJson(jadwal)).build();
 	}
 

@@ -15,6 +15,8 @@ import id.its.akademik.domain.Transkrip;
 
 public interface MahasiswaCache {
 	Boolean checkKey(String key);
+	void setMahasiswaData(String key,List<Mahasiswa> list);
+	List<Mahasiswa> getMahasiswaData(String key);
 	void setJadwalKuliah(String key,List<JadwalKuliah> list);
 	List<JadwalKuliah> getJadwalKuliah(String key);
 	void setPeriodeMhs(String key,List<PeriodeMahasiswa> list);

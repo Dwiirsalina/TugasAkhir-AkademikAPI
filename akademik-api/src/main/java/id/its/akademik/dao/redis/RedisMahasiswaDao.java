@@ -281,14 +281,18 @@ public class RedisMahasiswaDao extends AbstractCache implements MahasiswaCache {
 	public void setTranskripMhs(String key, Transkrip transkrip) {
 		Map<String,String> transkripValue=new HashMap<>();
 		transkripValue.put("nrp", transkrip.getNrp());
-		if(transkrip.getIpk()==null)
-		{
-			transkripValue.put("ipk", String.valueOf(0));
-		}
-		else
-		{
-			transkripValue.put("ipk", String.valueOf(transkrip.getIpk()));
-		}
+		transkripValue.put("judulTA", transkrip.getJudulTA());
+		transkripValue.put("judulTaInggris", transkrip.getJudulTaInggris());
+		transkripValue.put("pembimbing1", transkrip.getPembimbing1());
+		transkripValue.put("pembimbing2", transkrip.getPembimbing2());
+		transkripValue.put("pembimbing3", transkrip.getPembimbing3());
+		transkripValue.put("ipk", String.valueOf(transkrip.getIpk()));
+		transkripValue.put("sks", String.valueOf(transkrip.getSks()));
+		transkripValue.put("skslulus", String.valueOf(transkrip.getSksLulus()));
+		transkripValue.put("skstempuh", String.valueOf(transkrip.getSksTempuh()));
+		transkripValue.put("tahap", String.valueOf(transkrip.getTahap()));
+		
+//		}
 		
 //		transkripValue.put("email", pegawai.getEmail());
 //		transkripValue.put("alamat", pegawai.getAlamat());
@@ -302,18 +306,43 @@ public class RedisMahasiswaDao extends AbstractCache implements MahasiswaCache {
 		Map<String,String> transkripRedis=this.getHashOperation(key);
 		Transkrip transkrip=new Transkrip();
 		transkrip.setNrp(transkripRedis.get("nrp"));
-		
-//		if(transkrip.setIpk()==null)
-//		{
-//			transkrip.setIpk(Double.valueOf(0));
-//		}
-//		else
-//		{
-			transkrip.setIpk(Double.valueOf(transkripRedis.get("ipk")));
-//		}
+		transkrip.setJudulTA(transkripRedis.get("judulTA"));
+		transkrip.setJudulTaInggris(transkripRedis.get("judulTaInggris"));
+		transkrip.setPembimbing1(transkripRedis.get("pembimbing1"));
+		transkrip.setPembimbing2(transkripRedis.get("pembimbing2"));
+		transkrip.setPembimbing3(transkripRedis.get("pembimbing3"));
+		transkrip.setIpk(Double.valueOf(transkripRedis.get("ipk")));
+		transkrip.setSks(Integer.valueOf(transkripRedis.get("sks")));
+		transkrip.setSksLulus(Integer.valueOf(transkripRedis.get("skslulus")));
+		transkrip.setSksTempuh(Integer.valueOf(transkripRedis.get("skstempuh")));
+//		transkrip.setTahap( transkripRedis("tahap")));
 		
 		return transkrip;
 	}
+	
+	@Override
+	public void setMahasiswaData(String key, List<Mahasiswa> list) {
+		List<Object> objects=new ArrayList();
+		for(Mahasiswa dataMhs:list)
+		{
+			Object object=(Object) dataMhs;
+			objects.add(object);
+		}
+		this.setListOperation(key, objects);
+		
+	}
 
+	@Override
+	public List<Mahasiswa> getMahasiswaData(String key) {
+		List<Object> objects=this.getListOperations(key);
+		List<Mahasiswa> dataMahasiswa=new ArrayList();
+		
+		for(Object object:objects)
+		{
+			Mahasiswa dataMhs=(Mahasiswa) object;
+			dataMahasiswa.add(dataMhs);
+		}
+		return dataMahasiswa;
+	}
 
 }

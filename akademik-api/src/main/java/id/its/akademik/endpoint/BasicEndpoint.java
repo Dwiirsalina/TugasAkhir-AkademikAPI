@@ -11,6 +11,8 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
 import id.its.akademik.dao.AkademikDao;
+import id.its.akademik.dao.cache.AkademikCache;
+import id.its.akademik.domain.Kurikulum;
 import id.its.akademik.domain.Sekarang;
 import id.its.integra.security.Secured;
 
@@ -18,9 +20,14 @@ import id.its.integra.security.Secured;
 public class BasicEndpoint extends BaseEndpoint {
 
 	private AkademikDao akademikDao;
+	private AkademikCache akademikCache;
 
 	public void setAkademikDao(AkademikDao akademikDao) {
 		this.akademikDao = akademikDao;
+	}
+	
+	public void setAkademikCache(AkademikCache akademikCache) {
+		this.akademikCache = akademikCache;
 	}
 
 	@GET
@@ -28,7 +35,20 @@ public class BasicEndpoint extends BaseEndpoint {
 	@Path("/sekarang")
 	@Secured(roles = { "Mahasiswa", "Dosen", "Wali" }, module = "AKAD", type = "APPLICATION_USER")
 	public Response getStatusSekarang(@Context SecurityContext securityContext) {
-		List<Sekarang> sekarang = this.akademikDao.getSekarang();
+		
+		List<Sekarang> sekarang=null;
+		if(this.akademikCache.checkKey("Sekarang")==true)
+		{
+			sekarang=this.akademikCache.getBasicSekarang("Sekarang");
+		}
+		else
+		{
+			sekarang = this.akademikDao.getSekarang();
+			 if(sekarang!=null&&!sekarang.isEmpty())
+			 {
+				this.akademikCache.setBasicSekarang("Sekarang", sekarang); 
+			 }
+		}
 		return Response.ok(toJson(sekarang)).build();
 	}
 }

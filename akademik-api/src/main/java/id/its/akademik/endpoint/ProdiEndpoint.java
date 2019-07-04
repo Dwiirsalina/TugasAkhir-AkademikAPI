@@ -74,9 +74,20 @@ public class ProdiEndpoint extends BaseEndpoint {
 	@Path("/")
 	public Response getListProdi(@QueryParam("q") String query, @DefaultValue("0") @QueryParam("page") Integer page,
 			@DefaultValue("100") @QueryParam("per-page") Integer perPage, @QueryParam("fields") String fields) {
-
-		List<ProgramStudi> listProdi = this.kelembagaanDao.getProgramStudi(null, null, null, query, page, perPage);
-
+		
+		List<ProgramStudi> listProdi=null;
+		if(this.kelembagaanCache.checkKey("ProgramStudi")==true)
+		{
+			listProdi=this.kelembagaanCache.getProdi("ProgramStudi");
+		}
+		else
+		{
+			listProdi = this.kelembagaanDao.getProgramStudi(null, null, null, query, page, perPage);
+			if(listProdi!=null&&!listProdi.isEmpty())
+			{
+				this.kelembagaanCache.setProdi("ProgramStudi", listProdi);
+			}
+		}
 		return Response.ok(toJson(listProdi, fields)).build();
 	}
 
@@ -84,9 +95,19 @@ public class ProdiEndpoint extends BaseEndpoint {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/{id}")
 	public Response getProdi(@PathParam("id") String idProdi, @QueryParam("fields") String fields) {
-
-		List<ProgramStudi> listProdi = this.kelembagaanDao.getProgramStudi(idProdi, null, null, null, 0, 100);
-
+		List<ProgramStudi> listProdi=null;
+		if(this.kelembagaanCache.checkKey("ProgramStudi")==true)
+		{
+			listProdi=this.kelembagaanCache.getProdi("ProgramStudi");
+		}
+		else
+		{
+			listProdi = this.kelembagaanDao.getProgramStudi(idProdi, null, null, null, 0, 100);
+			if(listProdi!=null&&!listProdi.isEmpty())
+			{
+				this.kelembagaanCache.setProdi("ProgramStudi", listProdi);
+			}
+		}
 		return Response.ok(toJson(listProdi, fields)).build();
 	}
 
@@ -310,17 +331,17 @@ public class ProdiEndpoint extends BaseEndpoint {
 		else
 		{
 			list = this.kurikulumDao.getKurikulum(idProdi, tahun);
-			 if(list!=null&&!list.isEmpty())
-			 {
-				this.kurikulumCache.setMkKurikulum("Kurikulum_"+idProdi+"_"+tahun, list); 
-			 }
-		}
-		
-		for (Kurikulum k : list) {
-			List<MataKuliah> listMk = this.kurikulumDao.getMatakuliahKurikulum(k.getProdi(), k.getTahunKurikulum(),
-					k.getSemesterKurikulum(), bahasa);
-			k.setMataKuliah(listMk);
 			
+			for (Kurikulum k : list) {
+				List<MataKuliah> listMk = this.kurikulumDao.getMatakuliahKurikulum(k.getProdi(), k.getTahunKurikulum(),
+						k.getSemesterKurikulum(), bahasa);
+				k.setMataKuliah(listMk);
+			
+			}
+			if(list!=null&&!list.isEmpty())
+			{
+				this.kurikulumCache.setMkKurikulum("Kurikulum_"+idProdi+"_"+tahun, list);
+			}
 		}
 		return Response.ok(toJson(list)).build();
 	}
@@ -331,7 +352,7 @@ public class ProdiEndpoint extends BaseEndpoint {
 	@Secured(roles = { "Dosen", "Mahasiswa" }, module = "AKAD")
 	public Response getTahunKurikulum(@PathParam("id") String idProdi) {
 		List<Kurikulum> list= null;
-		if(this.kurikulumCache.checkKey("tahunKurikulum_"+idProdi)==true)
+		if(this.kurikulumCache.checkKey("Kurikulum_"+idProdi)==true)
 		{
 			list=this.kurikulumCache.getTahunKurikulum("");
 		}
@@ -340,7 +361,7 @@ public class ProdiEndpoint extends BaseEndpoint {
 			list = this.kurikulumDao.getTahunKurikulum(idProdi);
 			if(list!=null&&!list.isEmpty())
 			{
-				this.kurikulumCache.setTahunKurikulum("tahunKurikulum_"+idProdi, list);
+				this.kurikulumCache.setTahunKurikulum("Kurikulum_"+idProdi, list);
 			}
 		}
 		return Response.ok(toJson(list)).build();

@@ -6,6 +6,7 @@ import id.its.akademik.domain.FRS;
 import id.its.akademik.domain.MahasiswaFoto;
 import id.its.akademik.domain.MataKuliah;
 import id.its.akademik.domain.MataKuliahSyarat;
+import id.its.akademik.domain.Sekarang;
 
 public interface AkademikCache {
 	Boolean checkKey(String key);
@@ -17,4 +18,8 @@ public interface AkademikCache {
 	List<MataKuliahSyarat> getMataKuliahSyarat(String key);
 	void setListFrs(String key,List<FRS> list);
 	List<FRS> getListFrs(String key);
+	void setBasicSekarang(String key,List<Sekarang> list);
+	List<Sekarang> getBasicSekarang(String key);
+	void setDataFrs(String key, FRS frs);
+	FRS getDataFrs(String key);
 }
