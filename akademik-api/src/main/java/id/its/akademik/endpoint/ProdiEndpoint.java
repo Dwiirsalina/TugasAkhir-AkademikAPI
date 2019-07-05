@@ -354,7 +354,7 @@ public class ProdiEndpoint extends BaseEndpoint {
 		List<Kurikulum> list= null;
 		if(this.kurikulumCache.checkKey("Kurikulum_"+idProdi)==true)
 		{
-			list=this.kurikulumCache.getTahunKurikulum("");
+			list=this.kurikulumCache.getTahunKurikulum("Kurikulum_"+idProdi);
 		}
 		else
 		{

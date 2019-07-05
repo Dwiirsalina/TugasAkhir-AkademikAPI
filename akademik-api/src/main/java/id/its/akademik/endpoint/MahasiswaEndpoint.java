@@ -123,9 +123,9 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 		String nrpLama = this.mahasiswaDao.getNrpLama(nrp);
 		
 		List<Mahasiswa> mhs=null;
-		if(this.mahasiswaCache.checkKey("ProdiAjar")==true)
+		if(this.mahasiswaCache.checkKey("Mahasiswa_"+nrp)==true)
 		{
-			mhs=this.mahasiswaCache.getMahasiswaData("Mahasiswa");
+			mhs=this.mahasiswaCache.getMahasiswaData("Mahasiswa_"+nrp);
 		}
 		else
 		{
@@ -135,7 +135,7 @@ public class MahasiswaEndpoint extends BaseEndpoint {
 			if(mhs!=null&&!mhs.isEmpty())
 			{
 				mhs.get(0).setSemesterKe(this.mahasiswaDao.getSemesterKe(nrpLama));
-				this.mahasiswaCache.setMahasiswaData("Mahasiswa", mhs);
+				this.mahasiswaCache.setMahasiswaData("Mahasiswa_"+nrp, mhs);
 			}
 		}
 		return Response.ok(toJson(mhs)).build();
