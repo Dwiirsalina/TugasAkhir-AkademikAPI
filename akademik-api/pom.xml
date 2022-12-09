@@ -7,7 +7,7 @@
 	<packaging>war</packaging>
 	<properties>
 		<sqljdbc.version>6.4.0.jre8</sqljdbc.version>
-		<spring.version>4.0.0.RELEASE</spring.version>
+		<spring.version>6.0.0</spring.version>
 		<jdk.version>1.8</jdk.version>
 		<hikaricp.version>2.4.7</hikaricp.version>
 		<cxf.version>2.7.16</cxf.version>
